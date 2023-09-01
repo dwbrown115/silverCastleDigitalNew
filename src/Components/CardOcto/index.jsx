@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import "./cardOcto.scss";
+import "./cardOcto.scss";
 function CardOcto() {
     return (
         <div>
