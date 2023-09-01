@@ -3,14 +3,16 @@ import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 function Navbar() {
   const [backgroundColor, setBackgroundColor] = useState("transparent");
-  const [logo, setLogo] = useState("./silverCastleDigitalLogo2.png");
+  const [top, setTop] = useState("top");
 
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 0) {
         setBackgroundColor("#503dfa");
+        setTop("moved");
       } else {
         setBackgroundColor("transparent");
+        setTop("top");
       }
     }
 
@@ -27,11 +29,20 @@ function Navbar() {
   }
 
   return (
-    <div className="Navbar" style={{ backgroundColor }}>
+    <div
+      className="Navbar"
+      style={{
+        backgroundColor,
+        boxShadow:
+          top === "top"
+            ? "0 12px 20px 0 rgba(0, 0, 0, 0), 0 4px 10px 0 rgba(0, 0, 0, 0)"
+            : "0 12px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2)",
+      }}
+    >
       <div onClick={() => scrollTo("hero")} className="Logo">
         <img
           className="LogoImage"
-          src={logo}
+          src={"./silverCastleDigitalLogo2.png"}
           alt="silverCastleDigitalLogo.png"
         />
       </div>
