@@ -1,5 +1,5 @@
 .Hero {
-  height: 873px;
+  // height: 873px;
   // height: 100vh;
   padding-top: 92.61px;
   padding-left: 160px;
@@ -17,26 +17,26 @@
     // border-radius: 10px;
     align-self: flex-start;
     padding: 20px 20px;
-    margin-top: 110px;
-    width: 457px;
+    margin-top: 130px;
+    width: 510px;
     // background-color: #2ee5f99e;
     // color: #021f4b;
     // background-color: rgba(240, 255, 255, 0.71);
     .heroTopHeader {
-      font-size: 50px;
+      font-size: 55px;
       font-weight: 700;
       margin-bottom: 5px;
     }
     .heroTopSubHeader {
-      font-size: 30px;
+      font-size: 33px;
       font-weight: 500;
       margin-bottom: 15px;
       // color: #021f4b;
     }
   }
   .heroBottom {
-    margin-top: 290px;
-    margin-bottom: 140px;
+    margin-top: 350px;
+    margin-bottom: 120px;
     text-align: center;
     width: 500px;
     .heroBottomText {
