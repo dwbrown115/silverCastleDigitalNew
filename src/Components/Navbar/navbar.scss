@@ -2,78 +2,80 @@
   display: flex;
   z-index: 1000;
   position: fixed;
-  margin-top: 30px;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // bottom: 0;
-
+  // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  top: 0px;
+  // background-color: #6756fa;
   width: 100%;
-  justify-content: center;
+  padding: 7px 0px;
+  transition: 0.2s ease-in-out;
+  .Logo {
+    // padding: 5px;
+    margin-left: 50px;
+    border-radius: 50%;
+    .LogoImage {
+      width: 75px;
+      height: 75px;
+    }
+    &:hover {
+      cursor: pointer;
+      // background-color: #2ee5f9;
+      // transition: 0.2s ease-in-out;
+      // .LogoImage {
+      //   // transform: rotate(360deg);
+      //   // transition: transform 0.5s ease-in-out;
+      // }
+    }
+  }
   .NavbarElements {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
-    padding: 10px 50px;
-    background-color: #6756fa;
-    .Logo {
-      .LogoImage {
-        width: 100px;
-        height: 100px;
-      }
-      &:hover {
-        cursor: pointer;
-        // .LogoImage {
-        //   transform: rotate(360deg);
-        //   transition: transform 0.5s ease-in-out;
-        // }
-      }
-    }
+    // padding-left: 50px;
     .NavbarElementWrapper {
       z-index: 2;
       // background-color: #6756fa;
       display: flex;
       .NavbarElement {
-        //   margin: 0 10px;
-        // margin-right: -50px;
         display: flex;
-        justify-content: center;
-        align-content: center;
-        // flex-direction: column;
         flex-direction: row;
         .Element {
-          padding: 20px 15px;
-          font-size: 1rem;
-          font-weight: 600;
+          // padding: 0px 15px;
+          font-size: 1.6rem;
+          font-weight: 300;
           color: #fff;
           text-decoration: none;
-          // text-align: center;
+          display: flex;
+          align-items: center;
         }
         &:hover {
           text-decoration: none;
           cursor: pointer;
           .Element {
-            background-color: #88d3fc;
+            background-color: #2ee5f9;
+            color: #021f4b;
             // color: #505050;
+            transition: 0.2s ease-in-out;
           }
           .SeparatorBefore {
-            // border-top: 73.1px solid #88d3fc;
-            border-bottom: 73.1px solid #88d3fc;
+            // border-top: 73.1px solid #2ee5f9;
+            border-bottom: 73.1px solid #2ee5f9;
+            transition: 0.2s ease-in-out;
           }
           .Separator {
-            border-top: 73.1px solid #88d3fc;
+            border-top: 73.1px solid #2ee5f9;
+            transition: 0.2s ease-in-out;
           }
-        }
-        .HomeSeparatorBefore {
-          width: 0;
-          height: 0;
-          border-right: 50px solid transparent;
-          border-top: 73.1px solid #88d3fc;
-          margin-right: -50px;
+          .SeparatorContact {
+            border-top: 73.1px solid #2ee5f9;
+            transition: 0.2s ease-in-out;
+          }
         }
         .SeparatorBefore {
           // position: relative;
+          // background-color: #fff;
           right: 0px;
           width: 0;
           height: 0;
@@ -83,11 +85,19 @@
         }
         .Separator {
           // position: relative;
+          margin-right: -51px;
+          // background-color: #fff;
           width: 0;
           height: 0;
           border-right: 50px solid transparent;
           border-top: 73.1px solid transparent;
           // margin-top: -13.9px;
+        }
+        .SeparatorContact {
+          width: 0;
+          height: 0;
+          border-right: 50px solid transparent;
+          border-top: 73.1px solid transparent;
         }
       }
     }

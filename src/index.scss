@@ -1,4 +1,31 @@
 body {
   background-color: #021f4b;
   color: white;
+  margin: 0;
+  // height: 1000px;
+  font-family: "Roboto", sans-serif;
+  overflow: overlay;
+  scrollbar-gutter: stable both-edges;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  display: block;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0;
 }
