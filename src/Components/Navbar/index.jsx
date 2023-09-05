@@ -42,25 +42,30 @@ function Navbar() {
       <div onClick={() => scrollTo("hero")} className="Logo">
         <img
           className="LogoImage"
-          src={"./silverCastleDigitalLogo2.png"}
-          alt="silverCastleDigitalLogo.png"
+          src={"./silverCastleDigitalLogoVector.svg"}
+          alt="silverCastleDigitalLogo.svg"
         />
       </div>
       <div className="NavbarElements">
         <div className="NavbarElementWrapper">
-          <div onClick={() => scrollTo("about")} className="NavbarElement">
-            <div className="SeparatorBefore" />
-            <div className="Element">About</div>
-            <div className="Separator" />
-          </div>
           <div onClick={() => scrollTo("services")} className="NavbarElement">
             <div className="SeparatorBefore" />
             <div className="Element">Services</div>
             <div className="Separator" />
           </div>
+          <div onClick={() => scrollTo("method")} className="NavbarElement">
+            <div className="SeparatorBefore" />
+            <div className="Element">Methods</div>
+            <div className="Separator" />
+          </div>
           <div onClick={() => scrollTo("projects")} className="NavbarElement">
             <div className="SeparatorBefore" />
             <div className="Element">Projects</div>
+            <div className="Separator" />
+          </div>
+          <div onClick={() => scrollTo("team")} className="NavbarElement">
+            <div className="SeparatorBefore" />
+            <div className="Element">Team</div>
             <div className="Separator" />
           </div>
           <div onClick={() => scrollTo("contact")} className="NavbarElement">

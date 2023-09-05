@@ -29,7 +29,7 @@ function Hero() {
         </div>
         <div className="heroBottomButtonWrapper">
           <button
-            onClick={() => scrollTo("about")}
+            onClick={() => scrollTo("services")}
             className="heroBottomButton"
           >
             Learn More

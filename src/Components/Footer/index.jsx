@@ -3,7 +3,7 @@ import React from "react";
 import "./footer.scss";
 function Footer() {
   return (
-    <div>
+    <div className="Footer">
       <h1>Footer</h1>
     </div>
   );
