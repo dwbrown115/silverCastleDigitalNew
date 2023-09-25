@@ -1,0 +1,106 @@
+.contactForm {
+  padding: 30px;
+  background-color: #fff;
+  color: hsl(244, 7%, 47%);
+  width: 53%;
+  height: 575px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .formRow {
+    display: flex;
+    justify-content: space-between;
+    // text-align: center;
+    align-items: center;
+    margin-bottom: 5px;
+    .formLabel {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .inputField {
+      width: 70%;
+      border: none;
+      background-color: #f8fafb;
+      color: #a0a6ac;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 10px 15px;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+  .formAreaRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    .formLabel {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .areaField {
+      width: 70%;
+      max-width: 70%;
+      min-width: 70%;
+      min-height: 170px;
+      border: none;
+      background-color: #f8fafb;
+      color: #a0a6ac;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 10px 15px;
+      font-size: 25px;
+      font-weight: 600;
+      resize: none;
+    }
+  }
+  .formButtons {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    // width: 25%;
+    justify-content: space-between;
+    .resetButtonWrapper {
+      display: flex;
+      transition: all 0.6s ease;
+    }
+    .confirmButtonWrapper {
+      display: flex;
+      transform: translateX(-10%);
+      transition: all 0.6s ease;
+    }
+  }
+}
+
+.resetButton {
+  background-color: transparent;
+  color: #0095ff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 30px;
+  border: 2px solid #0095ff;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+.resetButton:hover {
+  background-color: #0095ff;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+.formButton {
+  border: 2px solid #0095ff;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #0095ff;
+  color: white;
+}
+.formButton:hover {
+  border: 2px solid #0095ff;
+  background-color: transparent;
+  color: #0095ff;
+  transition: 0.2s ease-in-out;
+}

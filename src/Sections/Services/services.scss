@@ -1,4 +1,22 @@
 .Services {
-    height: 500px;
-    // background-color: #516bfa;
+  background-color: #0e1250;
+  //   margin-top: -300px;
+  // padding: 0px 220px 113px 220px;
+  padding: 69px 220px;
+  .Header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    h1 {
+      font-size: 80px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+  .cardWrapper {
+    margin-top: 69px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -1,14 +1,15 @@
 .Hero {
   // height: 873px;
   // height: 100vh;
-  padding-top: 92.61px;
-  padding-left: 160px;
-  padding-right: 160px;
+  // padding-top: 92.61px;
+  // padding-left: 220px;
+  // padding-right: 220px;
+  padding: 112px 220px 150px 220px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
     url("../../Assets/hero.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: center -000px;
+  background-position: center -130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,55 +17,61 @@
   .heroTop {
     // border-radius: 10px;
     align-self: flex-start;
-    padding: 20px 20px;
-    margin-top: 130px;
-    width: 510px;
+    // padding: 20px 20px;
+    margin-top: 75px;
+    width: 650px;
     // background-color: #2ee5f99e;
     // color: #021f4b;
     // background-color: rgba(240, 255, 255, 0.71);
     .heroTopHeader {
-      font-size: 55px;
-      font-weight: 700;
+      font-size: 80px;
+      font-weight: 600;
       margin-bottom: 5px;
+      letter-spacing: -1px;
     }
     .heroTopSubHeader {
-      font-size: 33px;
-      font-weight: 500;
+      font-size: 40px;
       margin-bottom: 15px;
+      padding-right: 40px;
+      font-weight: lighter;
+      font-style: normal;
+      // font-weight: 100;
       // color: #021f4b;
     }
-  }
-  .heroBottom {
-    margin-top: 350px;
-    margin-bottom: 120px;
-    text-align: center;
-    width: 500px;
-    .heroBottomText {
-      font-size: 22px;
-      font-weight: 300;
-      margin-bottom: 30px;
-    }
-    .heroBottomButtonWrapper {
+    .heroButtonWrapper {
       display: flex;
-      justify-content: center;
-      .heroBottomButton {
-        border: 1px solid white;
-        border-radius: 30px;
-        display: inline-block;
+      .heroButtonSpacer {
+        margin-left: 62px;
+      }
+      .heroButton1 {
         color: white;
-        text-align: center;
-        margin: 0px 5px;
-        padding: 12px 30px;
-        font-size: 18px;
-        font-weight: 600;
-        transition: 0.3s;
+        border: 2px solid #0095ff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        background-color: #0095ff;
+        font-weight: 100;
+        cursor: pointer;
+        font-size: 30px;
+      }
+      .heroButton1:hover {
+        border: 2px solid white;
         background-color: transparent;
-        &:hover {
-          background-color: #2ee5f9;
-          color: #021f4b;
-          cursor: pointer;
-          border-color: #2ee5f9;
-        }
+        transition: 0.2s ease-in-out;
+      }
+      .heroButton2 {
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: 2px solid white;
+        background-color: transparent;
+        font-weight: 100;
+        cursor: pointer;
+        font-size: 30px;
+      }
+      .heroButton2:hover {
+        border: 2px solid #0095ff;
+        background-color: #0095ff;
+        transition: 0.2s ease-in-out;
       }
     }
   }

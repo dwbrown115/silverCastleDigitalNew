@@ -1,105 +1,57 @@
 .Navbar {
-  display: flex;
-  z-index: 1000;
+  transition: all 0.3s ease-in-out;
   position: fixed;
-  // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   top: 0px;
-  // background-color: #6756fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 220px;
   width: 100%;
-  padding: 7px 0px;
-  transition: 0.2s ease-in-out;
   .Logo {
-    // padding: 5px;
-    margin-left: 50px;
-    border-radius: 50%;
     .LogoImage {
-      width: 75px;
-      height: 75px;
-    }
-    &:hover {
+      width: 90px;
+      height: 90px;
       cursor: pointer;
-      // background-color: #2ee5f9;
-      // transition: 0.2s ease-in-out;
-      // .LogoImage {
-      //   // transform: rotate(360deg);
-      //   // transition: transform 0.5s ease-in-out;
-      // }
     }
   }
   .NavbarElements {
+    // margin-right: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
-    // padding-left: 50px;
-    .NavbarElementWrapper {
-      z-index: 2;
-      // background-color: #6756fa;
-      display: flex;
-      .NavbarElement {
-        display: flex;
-        flex-direction: row;
-        .Element {
-          // padding: 0px 15px;
-          font-size: 1.6rem;
-          font-weight: 300;
-          color: #fff;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-        }
-        &:hover {
-          text-decoration: none;
-          cursor: pointer;
-          .Element {
-            background-color: #2ee5f9;
-            color: #021f4b;
-            // color: #505050;
-            transition: 0.2s ease-in-out;
-          }
-          .SeparatorBefore {
-            // border-top: 73.1px solid #2ee5f9;
-            border-bottom: 73.1px solid #2ee5f9;
-            transition: 0.2s ease-in-out;
-          }
-          .Separator {
-            border-top: 73.1px solid #2ee5f9;
-            transition: 0.2s ease-in-out;
-          }
-          .SeparatorContact {
-            border-top: 73.1px solid #2ee5f9;
-            transition: 0.2s ease-in-out;
-          }
-        }
-        .SeparatorBefore {
-          // position: relative;
-          // background-color: #fff;
-          right: 0px;
-          width: 0;
-          height: 0;
-          border-left: 50px solid transparent;
-          border-bottom: 73.1px solid transparent;
-          // margin-top: -13.9px;
-        }
-        .Separator {
-          // position: relative;
-          margin-right: -51px;
-          // background-color: #fff;
-          width: 0;
-          height: 0;
-          border-right: 50px solid transparent;
-          border-top: 73.1px solid transparent;
-          // margin-top: -13.9px;
-        }
-        .SeparatorContact {
-          width: 0;
-          height: 0;
-          border-right: 50px solid transparent;
-          border-top: 73.1px solid transparent;
-        }
-      }
+    .NavbarElement {
+      margin: 0px 41px;
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.25px;
+      cursor: pointer;
+      height: 100%;
+      // padding: 10.4px 0px;
+      padding-top: 9.4px;
+      padding-bottom: 10.4px;
+      border-bottom: 1px solid transparent;
+    }
+    .NavbarElement:hover {
+      border-bottom: 1px solid white;
+      // transition: width 1s ease-in .2s;
+      // transition: width 5s ease-in-out;
+      transition: 0.2s ease-in-out;
+    }
+    .ContactButton {
+      margin-left: 41px;
+      font-size: 25px;
+      border: 2px solid #0095ff;
+      border-radius: 5px;
+      padding: 9.42px 18.23px;
+      background-color: #0095ff;
+      cursor: pointer;
+    }
+    .ContactButton:hover {
+      border: 2px solid white;
+      background-color: transparent;
+      transition: 0.2s ease-in-out;
     }
   }
 }

@@ -1,4 +1,48 @@
 .Team {
-  height: 500px;
-  background-color: #516bfa;
+  background-color: #0e1250;
+  padding: 69px 220px;
+  .Header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    h1 {
+      font-size: 80px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+  .teamContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 69px;
+    .teamImage {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .teamContentText {
+      text-align: right;
+      margin-left: 110px;
+      .teamHeader {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      .teamSubHeader {
+        margin-top: 20px;
+        padding-left: 10%;
+        font-size: 50px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+      }
+      .teamText {
+        margin-top: 10px;
+        // padding-left: 10%;
+        font-size: 35px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+  }
 }

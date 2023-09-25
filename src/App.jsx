@@ -1,23 +1,18 @@
 import { Navbar, Footer } from "./Components";
-import { Hero, Services, Method, Projects, Team, Contact } from "./Sections";
+import { Hero, Services, Projects, Team, Contact } from "./Sections";
 import "./App.scss";
 
 function App() {
   return (
     <>
       <div className="App">
-        <div className="NavbarContainer">
-          <Navbar />
-        </div>
+        <Navbar />
         <Hero />
         <Services />
-        <Method />
         <Projects />
         <Team />
         <Contact />
-        <div className="FooterContainer">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );

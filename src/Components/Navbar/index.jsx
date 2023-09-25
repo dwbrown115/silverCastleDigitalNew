@@ -8,7 +8,7 @@ function Navbar() {
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 0) {
-        setBackgroundColor("#503dfa");
+        setBackgroundColor("#634DD1");
         setTop("moved");
       } else {
         setBackgroundColor("transparent");
@@ -47,35 +47,19 @@ function Navbar() {
         />
       </div>
       <div className="NavbarElements">
-        <div className="NavbarElementWrapper">
-          <div onClick={() => scrollTo("services")} className="NavbarElement">
-            <div className="SeparatorBefore" />
-            <div className="Element">Services</div>
-            <div className="Separator" />
-          </div>
-          <div onClick={() => scrollTo("method")} className="NavbarElement">
-            <div className="SeparatorBefore" />
-            <div className="Element">Methods</div>
-            <div className="Separator" />
-          </div>
-          <div onClick={() => scrollTo("projects")} className="NavbarElement">
-            <div className="SeparatorBefore" />
-            <div className="Element">Projects</div>
-            <div className="Separator" />
-          </div>
-          <div onClick={() => scrollTo("team")} className="NavbarElement">
-            <div className="SeparatorBefore" />
-            <div className="Element">Team</div>
-            <div className="Separator" />
-          </div>
-          <div onClick={() => scrollTo("contact")} className="NavbarElement">
-            <div className="SeparatorBefore" />
-            <div className="Element">Contact</div>
-            <div className="SeparatorContact" />
-          </div>
+        <div onClick={() => scrollTo("services")} className="NavbarElement">
+          Services
+        </div>
+        <div onClick={() => scrollTo("projects")} className="NavbarElement">
+          Projects
+        </div>
+        <div onClick={() => scrollTo("team")} className="NavbarElement">
+          Team
+        </div>
+        <div onClick={() => scrollTo("contact")} className="ContactButton">
+          Get a Quote
         </div>
       </div>
-      <div className="navbarShadow" />
     </div>
   );
 }

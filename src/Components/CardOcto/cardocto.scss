@@ -1,0 +1,24 @@
+.card {
+  background-image: url("./cardOctoImage.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 325px;
+  height: 375px;
+  //   margin: 0px;
+  text-align: center;
+  padding-top: 85px;
+  .cardHeader {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    // margin-bottom: 20px;
+  }
+  .cardText {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    padding: 13px 28px;
+  }
+}

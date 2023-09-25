@@ -1,4 +1,29 @@
 .Contact {
-  height: 500px;
-  // background-color: #516bfa;
+  background-color: #634dd1;
+  padding: 69px 220px;
+  .Header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    h1 {
+      font-size: 80px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+  .contactContent {
+    display: flex;
+    align-items: center;
+    margin-top: 69px;
+    justify-content: space-between;
+    .contactText {
+      // height: 100%;
+      font-size: 40px;
+      font-weight: 800;
+      width: 40%;
+      text-align: right;
+      letter-spacing: 1px;
+    }
+  }
 }

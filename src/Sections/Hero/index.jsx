@@ -10,28 +10,22 @@ function Hero() {
     <div className="Hero" style={{ position: "relative" }}>
       <div
         id="hero"
-        style={{ position: "absolute", top: -92.61, right: "50%" }}
+        style={{ position: "absolute", top: -110, right: "50%" }}
       />
       <div className="heroTop">
         <div className="heroTopHeader">Silver Castle Digital</div>
         <div className="heroTopSubHeader">
-          Here to make your dreams a reality
+          Web development using the power of{" "}
+          <span style={{ color: "#88CCFC" }}>Artificial Intelligence</span>.
+          Quickly crafting stunning, professional, and functional websites for
+          your business.
         </div>
-        {/* <div className="heroTopText">
-          We're a web development company that specializes in creating
-          beautiful, functional websites for small businesses and individuals.
-        </div> */}
-      </div>
-      <div className="heroBottom">
-        <div className="heroBottomText">
-          We're a web development company that specializes in creating
-          beautiful, functional websites for small businesses and individuals.
-        </div>
-        <div className="heroBottomButtonWrapper">
-          <button
-            onClick={() => scrollTo("services")}
-            className="heroBottomButton"
-          >
+        <div className="heroButtonWrapper">
+          <button className="heroButton1" onClick={() => scrollTo("contact")}>
+            Contact Us
+          </button>
+          <div className="heroButtonSpacer" />
+          <button className="heroButton2" onClick={() => scrollTo("services")}>
             Learn More
           </button>
         </div>

@@ -1,3 +1,71 @@
 .Footer {
-  background-color: #503dfa;
+  background-color: #0e1250;
+  padding: 43px 220px 10px 220px;
+  display: flex;
+  justify-content: space-between;
+  .Logo {
+    .LogoImage {
+      width: 155px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+  .footerElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .elements {
+      display: flex;
+      align-items: center;
+      .element {
+        margin: 0px 41px;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.25px;
+        cursor: pointer;
+        height: 100%;
+        // padding: 10.4px 0px;
+        padding-top: 9.4px;
+        padding-bottom: 10.4px;
+        border-bottom: 1px solid transparent;
+      }
+      .element:hover {
+        border-bottom: 1px solid white;
+        // transition: width 1s ease-in .2s;
+        // transition: width 5s ease-in-out;
+        transition: 0.2s ease-in-out;
+      }
+      .ContactButton {
+        margin-left: 41px;
+        font-size: 25px;
+        border: 2px solid #0095ff;
+        border-radius: 5px;
+        padding: 9.42px 18.23px;
+        background-color: #0095ff;
+        cursor: pointer;
+      }
+      .ContactButton:hover {
+        border: 2px solid white;
+        background-color: transparent;
+        transition: 0.2s ease-in-out;
+      }
+    }
+    .socialMedia {
+      display: flex;
+      justify-content: space-between;
+      text-align: right;
+      width: 70%;
+      margin-left: auto;
+      margin-right: 0px;
+    }
+    .bottom {
+      text-align: right;
+      // margin: 5px 0px;
+    }
+    .copyright {
+      text-align: right;
+    }
+  }
 }
