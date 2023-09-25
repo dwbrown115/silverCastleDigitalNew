@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./cardOcto.scss";
+import "./cardocto.scss";
 function CardOcto({ Header, Text }) {
   return (
     <div className="card">
