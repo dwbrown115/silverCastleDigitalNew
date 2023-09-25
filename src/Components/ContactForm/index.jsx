@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_TEMPLATE_ID,
+  EMAILJS_SERVICE_ID,
+} from "../../../config";
 
 import "./contactForm.scss";
 
 function ContactForm() {
-  const [isVisable, setIsVisable] = useState(false);
+  const form = useRef();
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,6 +23,27 @@ function ContactForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form.current,
+        EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          alert("Email sent");
+          console.log(result.text);
+          handleResetConfirm();
+          setReset(false);
+        },
+        (error) => {
+          alert(
+            "Task unsuccessful please contact us at contact@silvercastledigital.com"
+          );
+          console.log(error.text);
+        }
+      );
   }
 
   function handleResetConfirm() {
@@ -27,7 +56,7 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="contactForm">
+    <form ref={form} onSubmit={handleSubmit} className="contactForm">
       <div className="formRow">
         <div className="formLabel">First Name</div>
         <input
@@ -37,6 +66,7 @@ function ContactForm() {
           type="text"
           className="inputField"
           id="firstName"
+          name="first_name"
           placeholder="First Name:"
         />
       </div>
@@ -49,6 +79,7 @@ function ContactForm() {
           type="text"
           className="inputField"
           id="firstName"
+          name="last_name"
           placeholder="Last Name:"
         />
       </div>
@@ -61,6 +92,7 @@ function ContactForm() {
           type="email"
           className="inputField"
           id="lastName"
+          name="email"
           placeholder="Email:"
         />
       </div>
@@ -72,7 +104,8 @@ function ContactForm() {
           value={website}
           type="text"
           className="inputField"
-          id="email"
+          id="website"
+          name="website"
           placeholder="example.com"
         />
       </div>
@@ -84,6 +117,7 @@ function ContactForm() {
           value={message}
           className="areaField"
           id="message"
+          name="message"
           placeholder="Tell me what your company does, and what kind of website you need."
         />
       </div>
