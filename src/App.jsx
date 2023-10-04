@@ -1,5 +1,12 @@
 import { Navbar, Footer, MobileNav } from "./Components";
-import { Hero, Services, Projects, Team, Contact } from "./Sections";
+import {
+  Hero,
+  Services,
+  Projects,
+  // Team,
+  Contact,
+} from "./Sections";
+
 import "./App.scss";
 
 function App() {
