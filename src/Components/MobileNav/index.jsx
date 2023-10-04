@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./mobileNav.scss";
+import "./mobilenav.scss";
 function MobileNav() {
   return (
     <div className="mobileNav">
