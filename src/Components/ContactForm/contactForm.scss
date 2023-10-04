@@ -81,12 +81,12 @@
   font-size: 30px;
   border: 2px solid #0095ff;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
   margin: 0px 10px;
 }
 .resetButton:hover {
   background-color: #0095ff;
   color: white;
-  transition: 0.2s ease-in-out;
 }
 .formButton {
   border: 2px solid #0095ff;
@@ -95,6 +95,7 @@
   padding: 10px 20px;
   font-size: 30px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
   background-color: #0095ff;
   color: white;
 }
@@ -102,5 +103,4 @@
   border: 2px solid #0095ff;
   background-color: transparent;
   color: #0095ff;
-  transition: 0.2s ease-in-out;
 }

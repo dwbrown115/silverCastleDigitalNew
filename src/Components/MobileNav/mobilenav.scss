@@ -1,0 +1,36 @@
+@media only screen and (min-width: 0px) and (max-width: 321px) {
+  .mobileNav {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 376px) {
+  .mobileNav {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 426px) {
+  .mobileNav {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+  .mobileNav {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .mobileNav {
+    display: none;
+  }
+}

@@ -1,57 +1,328 @@
-.Navbar {
-  transition: all 0.3s ease-in-out;
-  position: fixed;
-  z-index: 1000;
-  top: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 9px 220px;
-  width: 100%;
-  .Logo {
-    .LogoImage {
-      width: 90px;
-      height: 90px;
-      cursor: pointer;
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .Navbar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Navbar {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 11.5%;
+    // padding-left: 11.5%;
+    // padding-right: 11.5%;
+    width: 100%;
+    .Logo {
+      .LogoImage {
+        // width: 17.58%;
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+    }
+    .NavbarElements {
+      // margin-right: auto;
+      display: flex;
+      align-items: center;
+      width: 52%;
+      justify-content: space-between;
+      text-align: right;
+      .NavbarElement {
+        // margin: 0px 41px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.25px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+        // padding: 10.4px 0px;
+        padding-top: 9.4px;
+        padding-bottom: 10.4px;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s ease-in-out;
+      }
+      .NavbarElement:hover {
+        border-bottom: 1px solid white;
+        // transition: width 1s ease-in .2s;
+        // transition: width 5s ease-in-out;
+      }
+      .ContactButton {
+        // margin-left: 41px;
+        font-size: 18px;
+        border: 2px solid #0095ff;
+        border-radius: 5px;
+        padding: 6.78px 13.13px;
+        background-color: #0095ff;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .ContactButton:hover {
+        border: 2px solid white;
+        background-color: transparent;
+      }
     }
   }
-  .NavbarElements {
-    // margin-right: auto;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .Navbar {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    .NavbarElement {
-      margin: 0px 41px;
-      font-size: 27px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      letter-spacing: -0.25px;
-      cursor: pointer;
-      height: 100%;
-      // padding: 10.4px 0px;
-      padding-top: 9.4px;
-      padding-bottom: 10.4px;
-      border-bottom: 1px solid transparent;
+    padding: 9px 11.5%;
+    width: 100%;
+    .Logo {
+      .LogoImage {
+        // width: 17.58%;
+        width: 70px;
+        height: auto;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
     }
-    .NavbarElement:hover {
-      border-bottom: 1px solid white;
-      // transition: width 1s ease-in .2s;
-      // transition: width 5s ease-in-out;
-      transition: 0.2s ease-in-out;
+    .NavbarElements {
+      // margin-right: auto;
+      display: flex;
+      align-items: center;
+      width: 52%;
+      justify-content: space-between;
+      .NavbarElement {
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.25px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+        // padding: 10.4px 0px;
+        padding-top: 9.4px;
+        padding-bottom: 10.4px;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s ease-in-out;
+      }
+      .NavbarElement:hover {
+        border-bottom: 1px solid white;
+        // transition: width 1s ease-in .2s;
+        // transition: width 5s ease-in-out;
+      }
+      .ContactButton {
+        font-size: 21px;
+        border: 2px solid #0095ff;
+        border-radius: 5px;
+        padding: 8px 15.5px;
+        background-color: #0095ff;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .ContactButton:hover {
+        border: 2px solid white;
+        background-color: transparent;
+      }
     }
-    .ContactButton {
-      margin-left: 41px;
-      font-size: 25px;
-      border: 2px solid #0095ff;
-      border-radius: 5px;
-      padding: 9.42px 18.23px;
-      background-color: #0095ff;
-      cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 2000px) {
+  .Navbar {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 11.5%;
+    width: 100%;
+    .Logo {
+      .LogoImage {
+        // width: 17.58%;
+        // width: 90px;
+        width: 90px;
+        height: auto;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
     }
-    .ContactButton:hover {
-      border: 2px solid white;
-      background-color: transparent;
-      transition: 0.2s ease-in-out;
+    .NavbarElements {
+      // margin-right: auto;
+      display: flex;
+      align-items: center;
+      width: 52%;
+      justify-content: space-between;
+      .NavbarElement {
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.25px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+        // padding: 10.4px 0px;
+        padding-top: 9.4px;
+        padding-bottom: 10.4px;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s ease-in-out;
+      }
+      .NavbarElement:hover {
+        border-bottom: 1px solid white;
+        // transition: width 1s ease-in .2s;
+        // transition: width 5s ease-in-out;
+      }
+      .ContactButton {
+        font-size: 27px;
+        border: 2px solid #0095ff;
+        border-radius: 5px;
+        padding: 9.42px 18.23px;
+        background-color: #0095ff;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .ContactButton:hover {
+        border: 2px solid white;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2001px) and (max-width: 2560px) {
+  .Navbar {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 11.5%;
+    width: 100%;
+    .Logo {
+      .LogoImage {
+        // width: 17.58%;
+        // width: 90px;
+        width: 125px;
+        height: auto;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+    }
+    .NavbarElements {
+      // margin-right: auto;
+      display: flex;
+      align-items: center;
+      width: 52%;
+      justify-content: space-between;
+      .NavbarElement {
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.25px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+        // padding: 10.4px 0px;
+        padding-top: 9.4px;
+        padding-bottom: 10.4px;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s ease-in-out;
+      }
+      .NavbarElement:hover {
+        border-bottom: 1px solid white;
+        // transition: width 1s ease-in .2s;
+        // transition: width 5s ease-in-out;
+      }
+      .ContactButton {
+        font-size: 45px;
+        border: 3.33px solid #0095ff;
+        border-radius: 8.33px;
+        padding: 15.7px 30.38px;
+        background-color: #0095ff;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .ContactButton:hover {
+        border: 2px solid white;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2561px) {
+  .Navbar {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31.65px 11.5%;
+    width: 100%;
+    .Logo {
+      .LogoImage {
+        // width: 17.58%;
+        // width: 90px;
+        width: 190px;
+        height: auto;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+    }
+    .NavbarElements {
+      // margin-right: auto;
+      display: flex;
+      align-items: center;
+      width: 52%;
+      justify-content: space-between;
+      .NavbarElement {
+        font-size: 56.97px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.25px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+        // padding: 10.4px 0px;
+        padding-top: 9.4px;
+        padding-bottom: 10.4px;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s ease-in-out;
+      }
+      .NavbarElement:hover {
+        border-bottom: 1px solid white;
+        // transition: width 1s ease-in .2s;
+        // transition: width 5s ease-in-out;
+      }
+      .ContactButton {
+        font-size: 56.97px;
+        border: 4.44px solid #0095ff;
+        border-radius: 11.11px;
+        padding: 20.93px 40.5px;
+        background-color: #0095ff;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+      }
+      .ContactButton:hover {
+        border: 2px solid white;
+        background-color: transparent;
+      }
     }
   }
 }

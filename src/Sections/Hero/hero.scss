@@ -1,77 +1,681 @@
-.Hero {
-  // height: 873px;
-  // height: 100vh;
-  // padding-top: 92.61px;
-  // padding-left: 220px;
-  // padding-right: 220px;
-  padding: 112px 220px 150px 220px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
-    url("../../Assets/hero.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center -130px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  .heroTop {
-    // border-radius: 10px;
-    align-self: flex-start;
-    // padding: 20px 20px;
-    margin-top: 75px;
-    width: 650px;
-    // background-color: #2ee5f99e;
-    // color: #021f4b;
-    // background-color: rgba(240, 255, 255, 0.71);
-    .heroTopHeader {
-      font-size: 80px;
-      font-weight: 600;
-      margin-bottom: 5px;
-      letter-spacing: -1px;
-    }
-    .heroTopSubHeader {
-      font-size: 40px;
-      margin-bottom: 15px;
-      padding-right: 40px;
-      font-weight: lighter;
-      font-style: normal;
-      // font-weight: 100;
+@media only screen and (min-width: 0px) and (max-width: 321px) {
+  .Hero {
+    padding: 112px 11.5% 150px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 75px;
+      width: 650px;
+      // background-color: #2ee5f99e;
       // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 80px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 40px;
+        margin-bottom: 15px;
+        padding-right: 40px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 62px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 2px solid #0095ff;
+          border-radius: 5px;
+          padding: 10px 20px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton1:hover {
+          border: 2px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 5px;
+          padding: 10px 20px;
+          border: 2px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton2:hover {
+          border: 2px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
     }
-    .heroButtonWrapper {
-      display: flex;
-      .heroButtonSpacer {
-        margin-left: 62px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 376px) {
+  .Hero {
+    padding: 112px 11.5% 150px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 75px;
+      width: 650px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 80px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: -1px;
       }
-      .heroButton1 {
-        color: white;
-        border: 2px solid #0095ff;
-        border-radius: 5px;
-        padding: 10px 20px;
-        background-color: #0095ff;
-        font-weight: 100;
-        cursor: pointer;
-        font-size: 30px;
+      .heroTopSubHeader {
+        font-size: 40px;
+        margin-bottom: 15px;
+        padding-right: 40px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
       }
-      .heroButton1:hover {
-        border: 2px solid white;
-        background-color: transparent;
-        transition: 0.2s ease-in-out;
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 62px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 2px solid #0095ff;
+          border-radius: 5px;
+          padding: 10px 20px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton1:hover {
+          border: 2px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 5px;
+          padding: 10px 20px;
+          border: 2px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton2:hover {
+          border: 2px solid #0095ff;
+          background-color: #0095ff;
+        }
       }
-      .heroButton2 {
-        color: white;
-        border-radius: 5px;
-        padding: 10px 20px;
-        border: 2px solid white;
-        background-color: transparent;
-        font-weight: 100;
-        cursor: pointer;
-        font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 426px) {
+  .Hero {
+    padding: 112px 11.5% 150px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 75px;
+      width: 650px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 80px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: -1px;
       }
-      .heroButton2:hover {
-        border: 2px solid #0095ff;
-        background-color: #0095ff;
-        transition: 0.2s ease-in-out;
+      .heroTopSubHeader {
+        font-size: 40px;
+        margin-bottom: 15px;
+        padding-right: 40px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 62px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 2px solid #0095ff;
+          border-radius: 5px;
+          padding: 10px 20px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton1:hover {
+          border: 2px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 5px;
+          padding: 10px 20px;
+          border: 2px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton2:hover {
+          border: 2px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+  .Hero {
+    padding: 112px 11.5% 150px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 75px;
+      width: 650px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 80px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 40px;
+        margin-bottom: 15px;
+        padding-right: 40px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 62px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 2px solid #0095ff;
+          border-radius: 5px;
+          padding: 10px 20px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton1:hover {
+          border: 2px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 5px;
+          padding: 10px 20px;
+          border: 2px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton2:hover {
+          border: 2px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Hero {
+    padding: 74px 11.5% 50px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -85.8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 49.5px;
+      width: 429px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 52.8px;
+        font-weight: 600;
+        margin-bottom: 3.3px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 26.4px;
+        margin-bottom: 9.9px;
+        padding-right: 26.4px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 62px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 1.32px solid #0095ff;
+          border-radius: 3.3px;
+          padding: 6.6px 13.2px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 19.8px;
+        }
+        .heroButton1:hover {
+          border: 1.32px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 3.3px;
+          padding: 6.6px 13.2px;
+          border: 1.32px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 19.8px;
+        }
+        .heroButton2:hover {
+          border: 1.32px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .Hero {
+    padding: 87px 11.5% 10% 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 50px;
+      width: 505px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 55px;
+        font-weight: 600;
+        margin-bottom: 3.89px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 28px;
+        margin-bottom: 11.65px;
+        padding-right: 31px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 48px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 1.5px solid #0095ff;
+          border-radius: 3.9px;
+          padding: 7.77px 15.54px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 21px;
+        }
+        .heroButton1:hover {
+          border: 1.5px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 3.9px;
+          padding: 7.77px 15.54px;
+          border: 1.5px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 21px;
+        }
+        .heroButton2:hover {
+          border: 1.5px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 2000px) {
+  .Hero {
+    padding: 112px 11.5% 150px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 75px;
+      width: 650px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 80px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 40px;
+        margin-bottom: 15px;
+        padding-right: 40px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 62px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 2px solid #0095ff;
+          border-radius: 5px;
+          padding: 10px 20px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton1:hover {
+          border: 2px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 5px;
+          padding: 10px 20px;
+          border: 2px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 30px;
+        }
+        .heroButton2:hover {
+          border: 2px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2001px) and (max-width: 2560px) {
+  .Hero {
+    padding: 154.56px 11.5% 207px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 103.5px;
+      width: 897px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 109px;
+        font-weight: 600;
+        margin-bottom: 7px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 55.2px;
+        margin-bottom: 20.7px;
+        padding-right: 55.2px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 85.56px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 2.76px solid #0095ff;
+          border-radius: 6.9px;
+          padding: 13.8px 27.6px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 41.4px;
+        }
+        .heroButton1:hover {
+          border: 2.76px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 6.9px;
+          padding: 13.8px 27.6px;
+          border: 2.76px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 41.4px;
+        }
+        .heroButton2:hover {
+          border: 2.76px solid #0095ff;
+          background-color: #0095ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2561px) {
+  .Hero {
+    padding: 236.32px 11.5% 316.5px 11.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+      url("../../Assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .heroTop {
+      // border-radius: 10px;
+      align-self: flex-start;
+      // padding: 20px 20px;
+      margin-top: 158.25px;
+      width: 1371px;
+      // background-color: #2ee5f99e;
+      // color: #021f4b;
+      // background-color: rgba(240, 255, 255, 0.71);
+      .heroTopHeader {
+        font-size: 165px;
+        font-weight: 600;
+        margin-bottom: 10.55px;
+        letter-spacing: -1px;
+      }
+      .heroTopSubHeader {
+        font-size: 84.4px;
+        margin-bottom: 31.65px;
+        padding-right: 84.4px;
+        font-weight: lighter;
+        font-style: normal;
+        // font-weight: 100;
+        // color: #021f4b;
+      }
+      .heroButtonWrapper {
+        display: flex;
+        .heroButtonSpacer {
+          margin-left: 130.82px;
+        }
+        .heroButton1 {
+          color: white;
+          border: 4.22px solid #0095ff;
+          border-radius: 10.55px;
+          padding: 21.1px 42.2px;
+          background-color: #0095ff;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 63.3px;
+        }
+        .heroButton1:hover {
+          border: 4.22px solid white;
+          background-color: transparent;
+        }
+        .heroButton2 {
+          color: white;
+          border-radius: 10.55px;
+          padding: 21.1px 42.2px;
+          border: 4.22px solid white;
+          background-color: transparent;
+          font-weight: 100;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          font-size: 63.3px;
+        }
+        .heroButton2:hover {
+          border: 4.22px solid #0095ff;
+          background-color: #0095ff;
+        }
       }
     }
   }
