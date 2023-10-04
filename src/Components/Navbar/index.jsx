@@ -53,9 +53,9 @@ function Navbar() {
         <div onClick={() => scrollTo("projects")} className="NavbarElement">
           Projects
         </div>
-        <div onClick={() => scrollTo("team")} className="NavbarElement">
+        {/* <div onClick={() => scrollTo("team")} className="NavbarElement">
           Team
-        </div>
+        </div> */}
         <div onClick={() => scrollTo("contact")} className="ContactButton">
           Get a Quote
         </div>

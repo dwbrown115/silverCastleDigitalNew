@@ -24,9 +24,9 @@ function Footer() {
           <div onClick={() => scrollTo("projects")} className="element">
             Projects
           </div>
-          <div onClick={() => scrollTo("team")} className="element">
+          {/* <div onClick={() => scrollTo("team")} className="element">
             Team
-          </div>
+          </div> */}
           <div onClick={() => scrollTo("contact")} className="ContactButton">
             Get a Quote
           </div>

@@ -24,7 +24,7 @@ function Team() {
           <div className="teamHeader">Dakota Brown</div>
           <div className="teamSubHeader">Founder, Programmer and Designer</div>
           <div className="teamText">
-            Hi. I'm currently the sole employee. I started this company to help
+            Hi. Currently I'm the sole employee. I started this company to help
             me gain more practical experience building websites. Through
             personal projects and a few projects I have done for others, I can
             pretty much build whatever is needed. If you already have a design,
