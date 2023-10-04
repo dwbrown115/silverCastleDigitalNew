@@ -1,72 +1,358 @@
 @media only screen and (min-width: 0px) and (max-width: 321px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 69px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 69px;
+      .completedProjects {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 24px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 100%;
+      }
+    }
+  }
 }
 @media only screen and (min-width: 321px) and (max-width: 376px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 69px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 69px;
+      .completedProjects {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 24px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 376px) and (max-width: 426px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 69px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 69px;
+      .completedProjects {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 24px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 427px) and (max-width: 768px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 69px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 69px;
+      .completedProjects {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 24px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 45.54px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 297px;
+      h1 {
+        font-size: 52.8px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 45.54px;
+      .completedProjects {
+        font-size: 33px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 15.84px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 19.8px;
+        column-gap: 19.8px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 53.13px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 346.5px;
+      h1 {
+        font-size: 61.6px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 53.13px;
+      .completedProjects {
+        font-size: 38.5px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 18.5px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 23.1px;
+        column-gap: 23.1px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 2000px) {
-
+  .Projects {
+    background-color: #634dd1;
+    padding: 69px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+      h1 {
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 69px;
+      .completedProjects {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 24px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 2001px) and (max-width: 2560px) {
-  
+  .Projects {
+    background-color: #634dd1;
+    padding: 95.22px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 621px;
+      h1 {
+        font-size: 110px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 95.22px;
+      .completedProjects {
+        font-size: 69px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 33px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 41.4px;
+        column-gap: 41.4px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 2561px) {
-
-}
-
-.Projects {
-  background-color: #634dd1;
-  padding: 69px 11.5%;
-  .Header {
-    text-align: center;
-    // padding-top: 69px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 450px;
-    h1 {
-      font-size: 80px;
-      font-weight: 600;
-      letter-spacing: 2px;
+  .Projects {
+    background-color: #634dd1;
+    padding: 145.59px 11.5%;
+    .Header {
+      text-align: center;
+      // padding-top: 69px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 949.5px;
+      h1 {
+        font-size: 168.8px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
     }
-  }
-  .completedProjectsWrapper {
-    display: flex;
-    flex-direction: column;
-    // grid-template-columns: auto auto auto;
-    margin-top: 69px;
-    .completedProjects {
-      font-size: 50px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: -0.5px;
-    }
-    .completedProjectsList {
-      margin-top: 24px;
-      grid-template-columns: auto auto auto;
-      display: grid;
-      row-gap: 30px;
-      column-gap: 30px;
-      width: 100%;
+    .completedProjectsWrapper {
+      display: flex;
+      flex-direction: column;
+      // grid-template-columns: auto auto auto;
+      margin-top: 145.59px;
+      .completedProjects {
+        font-size: 105.5px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.5px;
+      }
+      .completedProjectsList {
+        margin-top: 50.64px;
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 63.3px;
+        column-gap: 63.3px;
+        width: 100%;
+      }
     }
   }
 }

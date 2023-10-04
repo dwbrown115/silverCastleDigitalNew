@@ -1,24 +1,245 @@
-.card {
-  background-image: url("./cardOctoImage.svg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: 23%;
-  height: auto;
-  //   margin: 0px;
-  text-align: center;
-  padding-top: 85px;
-  .cardHeader {
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    // margin-bottom: 20px;
+@media only screen and (min-width: 0px) and (max-width: 321px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 85px;
+    .cardHeader {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 13px 28px;
+    }
   }
-  .cardText {
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    letter-spacing: -0.6px;
-    padding: 13px 28px;
+}
+@media only screen and (min-width: 321px) and (max-width: 376px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 85px;
+    .cardHeader {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 13px 28px;
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 426px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 85px;
+    .cardHeader {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 13px 28px;
+    }
+  }
+}
+
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 85px;
+    .cardHeader {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 13px 28px;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23.5%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    .cardHeader {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.66px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 15.5px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 7px 19px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23.5%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    .cardHeader {
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 21.5px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 8px 21.56px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 2000px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 85px;
+    .cardHeader {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 13px 28px;
+    }
+  }
+}
+
+@media only screen and (min-width: 2001px) and (max-width: 2560px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 117.3px;
+    padding-bottom: 60px;
+    .cardHeader {
+      font-size: 41.4px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 35.88px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 17.94px 38.64px;
+    }
+  }
+}
+
+@media only screen and (min-width: 2561px) {
+  .card {
+    background-image: url("./cardOctoImage.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 23%;
+    height: auto;
+    //   margin: 0px;
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 70px;
+    .cardHeader {
+      font-size: 63.3px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      // margin-bottom: 20px;
+    }
+    .cardText {
+      font-size: 54.86px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.6px;
+      padding: 27.43px 59px;
+    }
   }
 }

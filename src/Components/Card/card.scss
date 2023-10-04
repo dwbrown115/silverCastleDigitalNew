@@ -1,26 +1,269 @@
-.Card {
-  width: 100%;
-  max-width: 500px;
-  padding: 13px;
-  background-color: #fff;
-  color: black;
-  border-radius: 15px;
-  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  .Logo {
-    height: auto;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .Preview {
-    border-radius: 10px;
-    margin-top: 13px;
-    height: auto;
+@media only screen and (min-width: 0px) and (max-width: 321px) {
+  .Card {
     width: 100%;
+    max-width: 500px;
+    padding: 13px;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 10px;
+      margin-top: 13px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 376px) {
+  .Card {
+    width: 100%;
+    max-width: 500px;
+    padding: 13px;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 10px;
+      margin-top: 13px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 426px) {
+  .Card {
+    width: 100%;
+    max-width: 500px;
+    padding: 13px;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 10px;
+      margin-top: 13px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+  .Card {
+    width: 100%;
+    max-width: 500px;
+    padding: 13px;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 10px;
+      margin-top: 13px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Card {
+    width: 100%;
+    max-width: 330px;
+    padding: 8.58px;
+    background-color: #fff;
+    color: black;
+    border-radius: 9.9px;
+    box-shadow: 0 6.6px 10.56px 0 rgba(0, 0, 0, 0.2),
+      0 4px 13.2px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 6.6px;
+      margin-top: 8.58px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .Card {
+    width: 100%;
+    max-width: 385px;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border-radius: 11.55px;
+    box-shadow: 0 7.7px 12.32px 0 rgba(0, 0, 0, 0.2),
+      0 4.62px 15.4px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 7.7px;
+      margin-top: 10px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 2000px) {
+  .Card {
+    width: 100%;
+    max-width: 500px;
+    padding: 13px;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 10px;
+      margin-top: 13px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 2001px) and (max-width: 2560px) {
+  .Card {
+    width: 100%;
+    max-width: 690px;
+    padding: 18px;
+    background-color: #fff;
+    color: black;
+    border-radius: 21px;
+    box-shadow: 0 13.8px 22px 0 rgba(0, 0, 0, 0.2),
+      0 8.28px 27.6px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 13.8px;
+      margin-top: 18px;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 2561px) {
+  .Card {
+    width: 100%;
+    max-width: 1055px;
+    padding: 27.43px;
+    background-color: #fff;
+    color: black;
+    border-radius: 31.65px;
+    box-shadow: 0 21.1px 33.76px 0 rgba(0, 0, 0, 0.2),
+      0 12.66px 42.2px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    .Logo {
+      height: auto;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Preview {
+      border-radius: 21.1px;
+      margin-top: 27.43px;
+      height: auto;
+      width: 100%;
+    }
   }
 }
