@@ -4,7 +4,7 @@ import { Card } from "../../Components";
 import {
   moolathonLogo,
   moolathonPreview,
-  // infiniteWorldsWikiPreview,
+  infiniteworldswikicapture,
 } from "./Project Images";
 
 import "./projects.scss";
@@ -38,7 +38,7 @@ function Projects() {
         <div className="completedProjectsList">
           <Card
             Logo={"Infinite Worlds Wiki"}
-            Preview={"/src/Sections/Projects/Project%20Images/InfiniteWorldsWiki/infiniteworldswikicapture.jpg"}
+            Preview={infiniteworldswikicapture}
             Link={"https://master.d1kv85vnf49b6g.amplifyapp.com/"}
             Description={"A feature complete wiki for an author I enjoy"}
           />

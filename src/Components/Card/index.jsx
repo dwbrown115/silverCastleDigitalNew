@@ -3,9 +3,25 @@ import React, { useState, useEffect } from "react";
 import "./card.scss";
 function Card({ Logo, Preview, Link, Description }) {
   function isImageURL(str) {
+    const imageFormats = [
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp",
+      "svg",
+      "webp",
+      "apng",
+      "avif",
+      "heif",
+    ];
+
+
     // const imageExtensions = /\.(jpg|jpeg|png|gif|bmp)$/i;
     // return imageExtensions.test(str);
-    return str.includes("/src/");
+    const containsImageFormat = imageFormats.some((format) => str.includes(format));
+    return containsImageFormat
   }
 
   return (
