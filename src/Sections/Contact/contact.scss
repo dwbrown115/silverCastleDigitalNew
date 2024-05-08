@@ -6,9 +6,9 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 450px;
+      width: 100%;
       h1 {
-        font-size: 80px;
+        font-size: 40px;
         font-weight: 600;
         letter-spacing: 2px;
       }
@@ -16,15 +16,17 @@
     .contactContent {
       display: flex;
       align-items: center;
-      margin-top: 69px;
+      margin-top: 35px;
       justify-content: space-between;
+      flex-direction: column-reverse;
       .contactText {
         // height: 100%;
-        font-size: 40px;
+        font-size: 20px;
         font-weight: 800;
-        width: 40%;
-        text-align: right;
+        width: 100%;
+        text-align: center;
         letter-spacing: 1px;
+        margin-bottom: 35px;
       }
     }
   }
@@ -38,9 +40,9 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 450px;
+      width: 100%;
       h1 {
-        font-size: 80px;
+        font-size: 45px;
         font-weight: 600;
         letter-spacing: 2px;
       }
@@ -48,15 +50,17 @@
     .contactContent {
       display: flex;
       align-items: center;
-      margin-top: 69px;
+      margin-top: 35px;
       justify-content: space-between;
+      flex-direction: column-reverse;
       .contactText {
         // height: 100%;
-        font-size: 40px;
+        font-size: 25px;
         font-weight: 800;
-        width: 40%;
-        text-align: right;
+        width: 100%;
+        text-align: center;
         letter-spacing: 1px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -70,9 +74,9 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 450px;
+      width: 100%;
       h1 {
-        font-size: 80px;
+        font-size: 50px;
         font-weight: 600;
         letter-spacing: 2px;
       }
@@ -80,15 +84,17 @@
     .contactContent {
       display: flex;
       align-items: center;
-      margin-top: 69px;
+      margin-top: 20px;
       justify-content: space-between;
+      flex-direction: column-reverse;
       .contactText {
         // height: 100%;
-        font-size: 40px;
+        font-size: 25px;
         font-weight: 800;
-        width: 40%;
-        text-align: right;
+        width: 100%;
+        text-align: center;
         letter-spacing: 1px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -104,23 +110,25 @@
       margin-right: auto;
       width: 450px;
       h1 {
-        font-size: 80px;
+        font-size: 70px;
         font-weight: 600;
         letter-spacing: 2px;
       }
     }
     .contactContent {
       display: flex;
+      flex-direction: column-reverse;
       align-items: center;
       margin-top: 69px;
       justify-content: space-between;
       .contactText {
         // height: 100%;
-        font-size: 40px;
+        font-size: 35px;
         font-weight: 800;
-        width: 40%;
-        text-align: right;
+        width: 100%;
+        text-align: center;
         letter-spacing: 1px;
+        margin-bottom: 25px;
       }
     }
   }

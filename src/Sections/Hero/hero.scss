@@ -4,8 +4,8 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center -130px;
+    background-size: 360% auto;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,18 +15,18 @@
       align-self: flex-start;
       // padding: 20px 20px;
       margin-top: 75px;
-      width: 650px;
+      width: 100%;
       // background-color: #2ee5f99e;
       // color: #021f4b;
       // background-color: rgba(240, 255, 255, 0.71);
       .heroTopHeader {
-        font-size: 80px;
+        font-size: 30px;
         font-weight: 600;
         margin-bottom: 5px;
         letter-spacing: -1px;
       }
       .heroTopSubHeader {
-        font-size: 40px;
+        font-size: 20px;
         margin-bottom: 15px;
         padding-right: 40px;
         font-weight: lighter;
@@ -43,12 +43,12 @@
           color: white;
           border: 2px solid #0095ff;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 15px 10px;
           background-color: #0095ff;
           font-weight: 100;
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          font-size: 30px;
+          font-size: 13px;
         }
         .heroButton1:hover {
           border: 2px solid white;
@@ -57,13 +57,13 @@
         .heroButton2 {
           color: white;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 15px 10px;
           border: 2px solid white;
           background-color: transparent;
           font-weight: 100;
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          font-size: 30px;
+          font-size: 13px;
         }
         .heroButton2:hover {
           border: 2px solid #0095ff;
@@ -79,8 +79,8 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center -130px;
+    background-size: 280% auto;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,18 +90,18 @@
       align-self: flex-start;
       // padding: 20px 20px;
       margin-top: 75px;
-      width: 650px;
+      width: 100%;
       // background-color: #2ee5f99e;
       // color: #021f4b;
       // background-color: rgba(240, 255, 255, 0.71);
       .heroTopHeader {
-        font-size: 80px;
+        font-size: 35px;
         font-weight: 600;
         margin-bottom: 5px;
         letter-spacing: -1px;
       }
       .heroTopSubHeader {
-        font-size: 40px;
+        font-size: 20px;
         margin-bottom: 15px;
         padding-right: 40px;
         font-weight: lighter;
@@ -112,18 +112,18 @@
       .heroButtonWrapper {
         display: flex;
         .heroButtonSpacer {
-          margin-left: 62px;
+          margin-left: 25px;
         }
         .heroButton1 {
           color: white;
           border: 2px solid #0095ff;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 10px 10px;
           background-color: #0095ff;
           font-weight: 100;
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          font-size: 30px;
+          font-size: 15px;
         }
         .heroButton1:hover {
           border: 2px solid white;
@@ -132,13 +132,13 @@
         .heroButton2 {
           color: white;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 10px 10px;
           border: 2px solid white;
           background-color: transparent;
           font-weight: 100;
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          font-size: 30px;
+          font-size: 15px;
         }
         .heroButton2:hover {
           border: 2px solid #0095ff;
@@ -155,51 +155,53 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center -130px;
+    background-size: 240% auto;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     .heroTop {
       // border-radius: 10px;
       align-self: flex-start;
       // padding: 20px 20px;
       margin-top: 75px;
-      width: 650px;
+      width: 100%;
       // background-color: #2ee5f99e;
       // color: #021f4b;
       // background-color: rgba(240, 255, 255, 0.71);
       .heroTopHeader {
-        font-size: 80px;
+        font-size: 40px;
         font-weight: 600;
         margin-bottom: 5px;
         letter-spacing: -1px;
       }
       .heroTopSubHeader {
-        font-size: 40px;
+        font-size: 20px;
         margin-bottom: 15px;
         padding-right: 40px;
         font-weight: lighter;
         font-style: normal;
+        // width: 50%;
         // font-weight: 100;
         // color: #021f4b;
       }
       .heroButtonWrapper {
         display: flex;
         .heroButtonSpacer {
-          margin-left: 62px;
+          margin-left: 30px;
         }
         .heroButton1 {
           color: white;
           border: 2px solid #0095ff;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 5px 10px;
           background-color: #0095ff;
           font-weight: 100;
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          font-size: 30px;
+          font-size: 20px;
         }
         .heroButton1:hover {
           border: 2px solid white;
@@ -208,13 +210,13 @@
         .heroButton2 {
           color: white;
           border-radius: 5px;
-          padding: 10px 20px;
+          padding: 5px 10px;
           border: 2px solid white;
           background-color: transparent;
           font-weight: 100;
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          font-size: 30px;
+          font-size: 20px;
         }
         .heroButton2:hover {
           border: 2px solid #0095ff;
@@ -227,12 +229,12 @@
 
 @media only screen and (min-width: 427px) and (max-width: 768px) {
   .Hero {
-    padding: 112px 11.5% 150px 11.5%;
+    padding: 50px 11.5% 100px 11.5%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center -130px;
+    background-size: 175% auto;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -241,20 +243,20 @@
       // border-radius: 10px;
       align-self: flex-start;
       // padding: 20px 20px;
-      margin-top: 75px;
-      width: 650px;
+      // margin-top: 5%;
+      // width: 650px;
       // background-color: #2ee5f99e;
       // color: #021f4b;
       // background-color: rgba(240, 255, 255, 0.71);
       .heroTopHeader {
-        font-size: 80px;
+        font-size: 70px;
         font-weight: 600;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         letter-spacing: -1px;
       }
       .heroTopSubHeader {
-        font-size: 40px;
-        margin-bottom: 15px;
+        font-size: 30px;
+        margin-bottom: 25px;
         padding-right: 40px;
         font-weight: lighter;
         font-style: normal;
@@ -308,7 +310,7 @@
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: center -85.8px;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -384,7 +386,7 @@
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: center -100px;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -460,7 +462,7 @@
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: center -130px;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -536,7 +538,7 @@
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: center -100px;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -612,7 +614,7 @@
       url("../../Assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: center -130px;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

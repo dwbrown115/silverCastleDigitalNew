@@ -3,7 +3,7 @@
     padding: 30px;
     background-color: #fff;
     color: hsl(244, 7%, 47%);
-    width: 53%;
+    width: 100%;
     height: 575px;
     border-radius: 10px;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
@@ -20,16 +20,17 @@
       .formLabel {
         font-size: 25px;
         font-weight: 600;
+        display: none;
       }
       .inputField {
-        width: 70%;
+        width: 100%;
         border: none;
         background-color: #f8fafb;
         color: #a0a6ac;
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 10px 15px;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
       }
     }
@@ -40,11 +41,12 @@
       .formLabel {
         font-size: 25px;
         font-weight: 600;
+        display: none;
       }
       .areaField {
-        width: 70%;
-        max-width: 70%;
-        min-width: 70%;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
         min-height: 170px;
         border: none;
         background-color: #f8fafb;
@@ -52,7 +54,7 @@
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 10px 15px;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
         resize: none;
       }
@@ -76,8 +78,8 @@
         background-color: transparent;
         color: #0095ff;
         border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 30px;
+        padding: 10px 8px;
+        font-size: 10px;
         border: 2px solid #0095ff;
         cursor: pointer;
         transition: 0.2s ease-in-out;
@@ -91,8 +93,8 @@
         border: 2px solid #0095ff;
         background-color: transparent;
         border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 30px;
+        padding: 10px 8px;
+        font-size: 10px;
         cursor: pointer;
         transition: 0.2s ease-in-out;
         background-color: #0095ff;
@@ -111,7 +113,7 @@
     padding: 30px;
     background-color: #fff;
     color: hsl(244, 7%, 47%);
-    width: 53%;
+    width: 100%;
     height: 575px;
     border-radius: 10px;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
@@ -128,9 +130,10 @@
       .formLabel {
         font-size: 25px;
         font-weight: 600;
+        display: none;
       }
       .inputField {
-        width: 70%;
+        width: 100%;
         border: none;
         background-color: #f8fafb;
         color: #a0a6ac;
@@ -139,6 +142,8 @@
         padding: 10px 15px;
         font-size: 25px;
         font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     .formAreaRow {
@@ -148,11 +153,12 @@
       .formLabel {
         font-size: 25px;
         font-weight: 600;
+        display: none;
       }
       .areaField {
-        width: 70%;
-        max-width: 70%;
-        min-width: 70%;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
         min-height: 170px;
         border: none;
         background-color: #f8fafb;
@@ -160,7 +166,7 @@
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 10px 15px;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 600;
         resize: none;
       }
@@ -184,8 +190,8 @@
         background-color: transparent;
         color: #0095ff;
         border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 30px;
+        padding: 18px 12px;
+        font-size: 12px;
         border: 2px solid #0095ff;
         cursor: pointer;
         transition: 0.2s ease-in-out;
@@ -199,8 +205,8 @@
         border: 2px solid #0095ff;
         background-color: transparent;
         border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 30px;
+        padding: 18px 12px;
+        font-size: 12px;
         cursor: pointer;
         transition: 0.2s ease-in-out;
         background-color: #0095ff;
@@ -220,7 +226,7 @@
     padding: 30px;
     background-color: #fff;
     color: hsl(244, 7%, 47%);
-    width: 53%;
+    width: 100%;
     height: 575px;
     border-radius: 10px;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
@@ -235,8 +241,9 @@
       align-items: center;
       margin-bottom: 5px;
       .formLabel {
-        font-size: 25px;
+        font-size: 15px;
         font-weight: 600;
+        max-width: 80px;
       }
       .inputField {
         width: 70%;
@@ -245,8 +252,8 @@
         color: #a0a6ac;
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding: 10px 15px;
-        font-size: 25px;
+        padding: 15px 8px;
+        font-size: 18px;
         font-weight: 600;
       }
     }
@@ -255,7 +262,7 @@
       justify-content: space-between;
       margin-bottom: 5px;
       .formLabel {
-        font-size: 25px;
+        font-size: 15px;
         font-weight: 600;
       }
       .areaField {
@@ -269,7 +276,7 @@
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 10px 15px;
-        font-size: 25px;
+        font-size: 18px;
         font-weight: 600;
         resize: none;
       }
@@ -293,8 +300,8 @@
         background-color: transparent;
         color: #0095ff;
         border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 30px;
+        padding: 15px 10px;
+        font-size: 13px;
         border: 2px solid #0095ff;
         cursor: pointer;
         transition: 0.2s ease-in-out;
@@ -308,8 +315,8 @@
         border: 2px solid #0095ff;
         background-color: transparent;
         border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 30px;
+        padding: 15px 10px;
+        font-size: 13px;
         cursor: pointer;
         transition: 0.2s ease-in-out;
         background-color: #0095ff;
@@ -329,7 +336,7 @@
     padding: 30px;
     background-color: #fff;
     color: hsl(244, 7%, 47%);
-    width: 53%;
+    width: 100%;
     height: 575px;
     border-radius: 10px;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2),
@@ -344,7 +351,7 @@
       align-items: center;
       margin-bottom: 5px;
       .formLabel {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
       }
       .inputField {
@@ -355,7 +362,7 @@
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 10px 15px;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
       }
     }
@@ -364,7 +371,7 @@
       justify-content: space-between;
       margin-bottom: 5px;
       .formLabel {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
       }
       .areaField {
@@ -378,7 +385,7 @@
         border-radius: 5px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 10px 15px;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
         resize: none;
       }
@@ -386,7 +393,7 @@
     .formButtons {
       display: flex;
       margin-left: auto;
-      margin-right: 0;
+      // margin-right: 0;
       // width: 25%;
       justify-content: space-between;
       .resetButtonWrapper {
@@ -403,7 +410,7 @@
         color: #0095ff;
         border-radius: 5px;
         padding: 10px 20px;
-        font-size: 30px;
+        font-size: 20px;
         border: 2px solid #0095ff;
         cursor: pointer;
         transition: 0.2s ease-in-out;
@@ -418,7 +425,7 @@
         background-color: transparent;
         border-radius: 5px;
         padding: 10px 20px;
-        font-size: 30px;
+        font-size: 20px;
         cursor: pointer;
         transition: 0.2s ease-in-out;
         background-color: #0095ff;

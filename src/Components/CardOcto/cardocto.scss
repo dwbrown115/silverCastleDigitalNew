@@ -3,19 +3,22 @@
     background-image: url("./cardOctoImage.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 23%;
+    width: 75%;
     height: auto;
-    //   margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    padding-top: 85px;
+    padding-top: 45px;
+    min-height: 212px;
+    margin-bottom: 10px;
     .cardHeader {
-      font-size: 30px;
+      font-size: 14px;
       font-weight: 600;
       letter-spacing: 1px;
       // margin-bottom: 20px;
     }
     .cardText {
-      font-size: 26px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -29,19 +32,23 @@
     background-image: url("./cardOctoImage.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 23%;
+    width: 75%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     //   margin: 0px;
     text-align: center;
-    padding-top: 85px;
+    padding-top: 60px;
+    min-height: 248px;
+    margin-bottom: 10px;
     .cardHeader {
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 600;
       letter-spacing: 1px;
       // margin-bottom: 20px;
     }
     .cardText {
-      font-size: 26px;
+      font-size: 17px;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -56,19 +63,23 @@
     background-image: url("./cardOctoImage.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 23%;
+    width: 70%;
     height: auto;
     //   margin: 0px;
     text-align: center;
-    padding-top: 85px;
+    padding-top: 59px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 261px;
+    margin-bottom: 15px;
     .cardHeader {
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 600;
       letter-spacing: 1px;
       // margin-bottom: 20px;
     }
     .cardText {
-      font-size: 26px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -83,19 +94,24 @@
     background-image: url("./cardOctoImage.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    width: 23%;
+    width: 50%;
     height: auto;
+    min-height: 336px;
     //   margin: 0px;
     text-align: center;
-    padding-top: 85px;
+    padding-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    // padding-bottom: 30px;
+    margin-bottom: 10px;
     .cardHeader {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 600;
       letter-spacing: 1px;
       // margin-bottom: 20px;
     }
     .cardText {
-      font-size: 26px;
+      font-size: 23px;
       font-style: normal;
       font-weight: 300;
       line-height: normal;

@@ -8,9 +8,9 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 450px;
+      width: 100%;
       h1 {
-        font-size: 80px;
+        font-size: 40px;
         font-weight: 600;
         letter-spacing: 2px;
       }
@@ -19,6 +19,7 @@
       margin-top: 69px;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
     }
   }
 }
@@ -32,17 +33,18 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 450px;
+      width: 100%;
       h1 {
-        font-size: 80px;
+        font-size: 45px;
         font-weight: 600;
         letter-spacing: 2px;
       }
     }
     .cardWrapper {
-      margin-top: 69px;
+      margin-top: 35px;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
     }
   }
 }
@@ -57,9 +59,9 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 450px;
+      width: 100%;
       h1 {
-        font-size: 80px;
+        font-size: 45px;
         font-weight: 600;
         letter-spacing: 2px;
       }
@@ -67,6 +69,7 @@
     .cardWrapper {
       margin-top: 69px;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
     }
   }
@@ -84,15 +87,16 @@
       margin-right: auto;
       width: 450px;
       h1 {
-        font-size: 80px;
+        font-size: 70px;
         font-weight: 600;
         letter-spacing: 2px;
       }
     }
     .cardWrapper {
-      margin-top: 69px;
+      margin-top: 60px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      // justify-content: space-between;
     }
   }
 }
