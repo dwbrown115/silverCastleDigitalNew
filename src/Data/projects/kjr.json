@@ -4,11 +4,16 @@
   "category": "Games & play",
   "status": "Nearing release",
   "intro": "An endless climber about a determined kitten, a trail of mice, and the sky above the rooftops.",
-  "image": "/projects/kjr.png",
+  "image": "./kjr.png",
   "imageAlt": "An orange kitten leaping above rooftops toward a mouse on a red balloon",
+  "tryHere": {
+    "label": "Play the demo",
+    "href": "https://play.unity.com/api/v1/games/game/4305aa9e-050e-4b30-ab23-47df060709b7/build/latest/frame",
+    "external": true
+  },
   "overview": [
-    "KJR is a small game built around one clear feeling: the delight of getting a little farther than you did last time.",
-    "You guide a kitten from rooftops toward the stars, collecting mice along the way and unlocking new feline companions. The work spans the game loop, visual identity, progression, and the details that make another run feel irresistible."
+    "KJR: Take To The Sky is a spiritual successor to the 2009 iPhone and iPod touch game Kitten Jump, developed with permission from the original creator. The project began by recreating the appeal of its simple upward-platforming loop in Unity while developing a new game around that foundation rather than attempting to reproduce the original assets or code. An early working prototype established the core movement and jumping feel, but development paused when the remaining work shifted from proving the mechanic to producing the art, content, tuning, and platform polish needed for a complete mobile game.",
+    "Development later resumed with the goal of turning that prototype into a deliberately small first release rather than endlessly expanding its scope. The current game builds an endless vertical run through changing environments and platform mechanics, with collectible mice, local scores, skins, touch and gyroscope steering, hazards, recovery mechanics, and increasingly varied traversal as altitude increases. Work has progressed into playtesting, mobile-platform validation, release planning, monetization, privacy, asset provenance, audio planning, store requirements, and the less glamorous production work required to move a game from 'the loop works' toward something suitable for public distribution."
   ],
   "challenge": "Keep the controls immediate and the premise charming while giving repeated runs enough variety and progression to stay interesting.",
   "approach": "Build the smallest satisfying loop first, play it constantly, then use agentic tools to move faster through assets, balancing, and implementation without losing a coherent point of view.",

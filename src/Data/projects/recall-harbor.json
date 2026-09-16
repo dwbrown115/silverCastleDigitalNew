@@ -1,27 +1,76 @@
 {
   "slug": "recall-harbor-info",
   "name": "Recall Harbor",
-  "category": "Knowledge & memory",
-  "status": "Web app available",
-  "intro": "A private place to keep useful ideas, notes, and conversations within reach.",
-  "image": "/projects/recall-harbor.png",
+  "category": "Knowledge & AI",
+  "status": "Deployed MVP",
+  "intro": "A private knowledge and continuity platform that lets people and their AI assistants recover context, preserve evolving ideas, and pick up where they left off.",
+  "image": "./recall-harbor.png",
   "imageAlt": "A quiet harbor protected by an illuminated stone breakwater",
+  "tryHere": {
+    "label": "Try Recall Harbor",
+    "href": "https://recallharbor.app/",
+    "external": true
+  },
   "overview": [
-    "Recall Harbor grew out of a problem I kept running into: valuable context was scattered across notes, chats, and half-remembered ideas.",
-    "The product brings that material into one calm, searchable home. Imports, tags, and an optional ChatGPT connection make it easier to recover the right thought when it becomes useful again."
+    "Recall Harbor grew from a practical problem: useful decisions, ideas, and project history were becoming buried across large AI conversation archives and disconnected notes. It began as a simple Zettelkasten-style CSV import utility called Lattice, then evolved as the problem expanded from storing information to preserving provenance, finding the right context later, and making that knowledge useful outside the conversation that created it.",
+    "Today, Recall Harbor provides a searchable personal library that can be used directly through its web interface or accessed by authorized AI assistants. Users can import and browse existing knowledge, recover relevant context from previous work, and explicitly preserve new information without silently replacing the history behind it. The system is already being dogfooded to reconstruct the development histories of Silvercastle projects for this portfolio, including Recall Harbor itself."
   ],
-  "challenge": "Make personal knowledge easy to capture without turning it into another system that needs constant maintenance.",
-  "approach": "Start with the moments where memory breaks down, then use agentic workflows to reduce the work between saving something and finding it again.",
+  "challenge": "Build durable continuity across large, fragmented histories without turning AI memory into an opaque summary, losing original sources, or removing the user's control over what an assistant can read and preserve.",
+  "approach": "Treat the knowledge library as the durable source of truth and AI assistants as permissioned clients of that library rather than as the memory system itself. Recall Harbor preserves source material and provenance, exposes bounded retrieval with citations and coverage limits, separates read and write capabilities, and records evolving information through append-only additions instead of silently rewriting history. Agentic systems help retrieve, reconstruct, and preserve useful context while the underlying product remains independently usable by the person who owns the library.",
   "highlights": [
-    { "title": "Bring it together", "text": "Import useful material from the places where it already lives." },
-    { "title": "Find the thread", "text": "Search and tags make old context available when a new problem brings it back into focus." },
-    { "title": "Keep it private", "text": "Designed as a personal knowledge space rather than a public feed." }
+    {
+      "title": "Context with provenance",
+      "text": "Retrieval is designed to recover relevant material together with its source context, chronology, and evidence, allowing an assistant to reconstruct how a project or idea evolved instead of relying on a flattened memory summary."
+    },
+    {
+      "title": "Permission-aware continuity",
+      "text": "Reading, append-only note creation, conversation capture, and structured inventory changes have distinct permission boundaries, keeping useful AI continuity tied to explicit user control rather than indiscriminate conversation recording."
+    },
+    {
+      "title": "Built through real use",
+      "text": "Recall Harbor evolved from a personal CSV-memory utility into a deployed knowledge product by repeatedly testing it against the workflows that motivated it. It is now being used to recover Silvercastle project histories and construct this portfolio, including reconstructing Harbor's own development."
+    }
   ],
   "facts": [
-    { "label": "Role", "value": "Product, design & development" },
-    { "label": "Focus", "value": "Memory, retrieval & AI" },
-    { "label": "Stage", "value": "Available now" }
+    { "label": "Role", "value": "Founder & developer" },
+    { "label": "Focus", "value": "Knowledge continuity" },
+    { "label": "Stage", "value": "Deployed MVP" }
   ],
-  "next": "Continue refining the capture and retrieval loop around real daily use.",
-  "primaryAction": { "label": "Visit Recall Harbor", "href": "https://recallharbor.app/", "external": true }
+  "next": "Continue hardening the deployed product and move from internal and real-world dogfooding toward broader user testing and release.",
+  "primaryAction": {
+    "label": "Visit Recall Harbor",
+    "href": "https://recallharbor.app/",
+    "external": true
+  },
+  "pages": [
+    {
+      "slug": "from-lattice-to-harbor",
+      "title": "From Lattice to Recall Harbor",
+      "summary": "How a personal conversation-import tool evolved into a continuity system shared by humans and AI assistants.",
+      "category": "Recall Harbor deep dive",
+      "intro": "Recall Harbor emerged through repeated attempts to solve increasingly general versions of the same problem: useful context survives longer than the conversation or application that created it.",
+      "overview": [
+        "The earliest version of the idea was much narrower. Lattice began as a practical way to import and organize information that was becoming buried inside large AI conversation exports. At that stage, the problem looked primarily like storage and retrieval: get useful information out of giant histories and into a structure that could be searched later.",
+        "As the archive grew, retrieval alone was not enough. A useful result needed to retain where it came from, when it was said, what surrounded it, and whether later information changed the conclusion. That pushed the architecture toward provenance, chronology, evidence-linked retrieval, and append-only history rather than treating memory as a single editable summary.",
+        "The next step was making the same durable knowledge usable by both the person who owns it and authorized AI assistants. Recall Harbor therefore treats the library as the persistent system and an AI as one permissioned client of it. Human browsing, AI retrieval, explicit note creation, structured tools, and provenance all operate against the same underlying knowledge rather than maintaining separate human and machine memories.",
+        "The portfolio itself became an unexpected demonstration of that architecture. Years of project decisions were distributed across development conversations, project files, and later summaries. Recall Harbor was used to recover those histories and reconstruct the case studies on this website—including the history of Recall Harbor itself."
+      ],
+      "challenge": "Preserve enough original evidence that old work can be reconstructed accurately without forcing either a human or an AI assistant to carry the entire historical archive in immediate context.",
+      "approach": "Build continuity around durable source material, bounded retrieval, provenance, chronology, append-only evolution, and explicit permission boundaries. Summaries are useful navigation aids, but they are not allowed to become the only surviving representation of the history.",
+      "highlights": [
+        {
+          "title": "Compression without erasure",
+          "text": "Harbor can surface compact context while retaining access to the underlying conversations and records when a compressed representation loses important detail."
+        },
+        {
+          "title": "Shared continuity layer",
+          "text": "The same library supports direct human use and authorized AI clients, avoiding the assumption that knowledge only exists for or inside one assistant."
+        },
+        {
+          "title": "Dogfooded reconstruction",
+          "text": "The system is being used against its intended problem in practice: recovering enough historical evidence to reconstruct long-running Silvercastle projects without relying solely on retrospective memory."
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,130 @@
+{
+  "slug": "kernel-info",
+  "name": "Kernel",
+  "category": "Experimental AI research",
+  "status": "Long-term research",
+  "intro": "A long-running research project exploring whether a persistent, biologically inspired learner can develop useful internal representations and adaptive behavior through experience rather than relying on an LLM as its cognitive core.",
+  "image": "./kernel-maze-world-model.png",
+  "imageAlt": "A maze environment displayed beside Kernel's diagnostic internal spatial representation",
+  "overview": [
+    "Kernel began with a different question from most of my AI work: instead of asking how to make a language model behave more intelligently, I wanted to explore what I would build if the learner itself had to acquire useful behavior from experience. The project therefore treats learning, memory, attention, internal state, perception, and action selection as parts of a persistent adaptive system rather than delegating cognition to an LLM.",
+    "Development has proceeded experimentally rather than toward a fixed feature list. Mazes, visual reconstruction, short-term memory tasks, glyph and pattern learning, browser environments, and increasingly general visual interaction have been used as controlled environments for exposing specific capability gaps. Observed failures and unexpected behaviors become inputs to the next architectural iteration rather than being hidden behind a more capable external model."
+  ],
+  "challenge": "Explore whether a persistent digital learner can acquire increasingly general representations and behavior from raw experience while keeping the source of that behavior inside the learner itself, rather than quietly replacing missing capabilities with language-model reasoning or task-specific scripted solutions.",
+  "approach": "Treat capability development as an experimental loop: construct an environment that isolates a question, observe the learner's behavior and internal state, distinguish observations from interpretations, modify the architecture when the evidence justifies it, and test whether the resulting capability transfers beyond the environment that exposed the problem. The surrounding application, bridge, teachers, evaluators, and diagnostic systems are deliberately separated from Kernel-owned cognition so improvements in the experimental harness cannot be mistaken for improvements in the learner.",
+  "highlights": [
+    {
+      "title": "Persistent internal state",
+      "text": "Kernel maintains learned state and internal representations across interaction rather than treating every observation as an isolated inference. Maze experiments have produced inspectable spatial representations that can be compared directly with the environments that generated them."
+    },
+    {
+      "title": "Learning across task types",
+      "text": "Research expanded from navigation into visual reconstruction, short-term spatial memory, glyph and pattern recognition, causal action outcomes, and transfer between environments. The objective is not mastery of one benchmark but identifying which learned mechanisms remain useful when the surface task changes."
+    },
+    {
+      "title": "Failures remain evidence",
+      "text": "Pathological loops, unstable behavior, incomplete memory, failed tasks, and architectural dead ends remain part of the research record. They help distinguish apparent capability from reliable capability and repeatedly expose where the architecture or experimental methodology needs to change."
+    }
+  ],
+  "facts": [
+    {
+      "label": "Role",
+      "value": "Research & architecture"
+    },
+    {
+      "label": "Focus",
+      "value": "Adaptive cognition"
+    },
+    {
+      "label": "Stage",
+      "value": "Active research"
+    }
+  ],
+  "next": "Continue testing whether Kernel's learned visual, spatial, memory, and causal representations can generalize into increasingly unfamiliar environments without transferring behavioral authority back to task-specific scaffolding or external models.",
+  "primaryAction": {
+    "label": "Ask about the research",
+    "href": "mailto:dakota.w.brown@silvercastledigital.com?subject=Kernel%20Research"
+  },
+  "pages": [
+    {
+      "slug": "research-history",
+      "title": "Kernel Research History",
+      "summary": "From the failed Matrix architecture through maze learning, visual representation, memory experiments, and the current adaptive Kernel.",
+      "category": "Kernel research deep dive",
+      "intro": "Kernel is easier to understand as a sequence of hypotheses, failures, observations, and architectural revisions than as a list of features.",
+      "overview": [
+        "The research did not begin with the current Kernel. An earlier architecture, Matrix, explored some of the same underlying ambition but ultimately became a failed predecessor rather than the foundation of the current system. Its importance is not that it worked; it established an early attempt at the problem and helped clarify that the architecture itself needed to change rather than simply accumulate more patches.",
+        "The early Kernel emerged inside a much more conventional desktop AI application. Language models originally existed around navigation experiments as planners, evaluators, fallbacks, and training wheels. Over time, local navigation became increasingly independent and the research question shifted toward what the learner itself could retain and discover. The current runtime explicitly treats that old OpenAI-dependent application as archival scaffolding rather than part of the active Kernel architecture.",
+        "Maze environments became the first sustained experimental laboratory because they provided simple actions, clear constraints, repeatable layouts, and an objective outcome without requiring sophisticated language. Early behavior exposed failure modes ranging from repetitive wall interactions and unstable loops to incomplete understanding of the goal. These failures were useful precisely because the environment was simple enough for the resulting behavior to be inspected rather than explained away.",
+        {
+          "text": "As navigation improved, the experiments began producing evidence beyond simple success or failure. Kernel generated internal spatial state that could be visualized beside the environment, and some reconstructions corresponded closely enough with the actual maze to preserve substantial layout structure. This directly demonstrates that useful spatial information existed inside the system. What remains a research question is what that representation means internally, how it is encoded, and when Kernel can reliably use it to guide behavior.",
+          "image": "./kernel-maze-world-model.png",
+          "imageAlt": "A maze environment displayed beside Kernel's reconstructed internal spatial state and runtime diagnostics",
+          "caption": "Observed on July 14, 2026: the maze and Kernel's diagnostic spatial reconstruction are visible together. The frame establishes inspectable structure, while its internal meaning remains an interpretation."
+        },
+        {
+          "text": "The distinction between representation and behavior became important because the two did not always improve together. Some experiments showed substantial reconstructed spatial structure while Kernel still struggled to identify or exploit the correct route. That separated two questions that initially looked like one: whether useful environmental information had been represented, and whether the learner could reliably convert that information into successful decisions.",
+          "image": "./kernel-representation-behavior.png",
+          "imageAlt": "Kernel maze environment, internal spatial representation, and live behavioral diagnostics shown in the same experiment",
+          "caption": "The environment, internal representation, and live control trace can be inspected separately in the same run instead of treating a useful representation as proof of a successful policy."
+        },
+        "Repeated environments created a stronger test of persistence. After previously solving some mazes, Kernel later navigated those environments substantially more directly, in some cases moving toward the known exit rather than repeating the original exploration. The behavioral change is observable evidence that information from an earlier run affected later behavior. It does not by itself establish exactly what was remembered, how it was represented, or which mechanism retrieved it.",
+        "Persistence also failed in informative ways. Resets and architectural changes could produce behavior resembling amnesia, while incomplete or unreliable retained state sometimes created its own problems. These failures made memory less useful as a binary feature claim and more useful as a research subject: what information persists, for how long, under what conditions, and whether retained information improves or destabilizes later behavior.",
+        {
+          "text": "Visual reconstruction expanded the research beyond navigation. Kernel was shown simple shapes, symbols, and letters and asked to reproduce their structure. Its reconstructions could then be compared directly with the target, providing a concrete measure of what visual information survived perception and learning. Because these experiments included explicit grading, they demonstrate adaptation under feedback more clearly than they demonstrate unsupervised representation formation.",
+          "image": "./kernel-visual-reconstruction.png",
+          "imageAlt": "Kernel diagnostic reconstruction displayed beside a purple numeral four used as the visual training target",
+          "caption": "Observed on July 20, 2026: a training glyph and Kernel's diagnostic reconstruction are visible together. The explicit training interface limits the claim to adaptation under feedback."
+        },
+        {
+          "text": "Corsi-style experiments tested temporary ordered spatial memory rather than long-term navigation knowledge. Kernel observed sequences of locations and later attempted to reproduce them. Some outputs came close to the target sequence while other runs failed or exhausted their execution budget. The task therefore provides evidence about perception, retention, ordering, and recall without requiring successful completion to be treated as proof of a general memory capability.",
+          "image": "./kernel-corsi-memory.png",
+          "imageAlt": "Corsi Forward memory board displayed beside Kernel's diagnostic representation of the nine spatial locations",
+          "caption": "Observed on July 20, 2026: the Corsi task and Kernel's diagnostic representation appear in the same frame. A still image establishes the test context, not successful ordered recall."
+        },
+        "As the experimental environments became richer, methodology became as important as raw capability. A sufficiently helpful teacher, evaluator, bridge, or host application could accidentally perform cognitive work on Kernel's behalf and produce a successful-looking result. The architecture therefore became increasingly strict about capability ownership: the surrounding system may provide a body, environment, bounded teaching signals, and measurement, but it should not silently choose the learner's goals, interpretations, or actions.",
+        "In the current architecture, the application owns external lifecycle and physical target selection, the bridge acts as a sensory and motor body, and Kernel owns cognition and behavior. The bridge can transport raw visual information and execute Kernel-selected actions, but it is explicitly prevented from inventing replacement actions or accepting behavioral decisions from another owner. This boundary exists so improvements in the surrounding software cannot quietly become improvements attributed to Kernel.",
+        {
+          "text": "Visual research then broadened into structured pattern learning. Current programs expose Kernel to glyphs, structural relationships, causal action outcomes, and functional transfer while preserving raw-first prediction and evidence requirements. Training systems can present tasks and evaluate outcomes, but curriculum automation is intentionally constrained so that an automated teacher cannot become hidden cognition.",
+          "image": "./kernel-pattern-training.png",
+          "imageAlt": "Kernel pattern-training interface showing a blue letter H beside the learner's diagnostic visual state",
+          "caption": "Implemented by July 20, 2026: the training surface presents a glyph while the separate Kernel state panel exposes the learner's diagnostic representation."
+        },
+        "The current Adaptive Kernel generalizes those lessons beyond maze-specific control. Kernel receives raw visual input through a body-like bridge, maintains its own internal world, selects actions, learns from outcomes, and exposes diagnostics for analysis. The active runtime no longer requires OpenAI or another external model to provide cognition at runtime, although AI tools continue to assist the human side of implementation, analysis, and research planning.",
+        "That independence does not make every interesting behavior evidence of a general cognitive mechanism. Kernel's experiments produce several different levels of claim. Some properties are directly established by implementation. Some behaviors are directly observed. Repeated observations can provide evidence for a broader interpretation. The mechanism that best explains those observations may still remain a hypothesis. Keeping those levels separate is part of the research methodology.",
+        "Kernel remains unfinished research. The project has produced repeatable behaviors and internal evidence consistent with learned spatial, visual, memory, and causal representations, alongside failures that constrain those interpretations. Those observations are not presented as proof of human-like cognition or general intelligence. Their value is that they are strong enough to motivate increasingly controlled experiments and to make the next questions more precise than the ones that started the project."
+      ],
+      "challenge": "Determine which apparent capabilities genuinely arise from Kernel's learned internal state and which are artifacts of task-specific scaffolding, evaluator behavior, environmental shortcuts, or architectural assumptions.",
+      "approach": "Maintain a traceable experimental progression. Introduce new capabilities through controlled environments, preserve diagnostic evidence, compare behavior with internal state, deliberately test persistence and transfer, and tighten ownership boundaries whenever the surrounding system becomes capable enough to contaminate the experiment. Implemented mechanisms, observed behaviors, evidence-supported interpretations, and hypotheses are treated as different levels of claim.",
+      "highlights": [
+        {
+          "title": "Matrix to Kernel",
+          "text": "The project includes a failed predecessor and an architectural reset, preserving the distinction between an idea that seemed plausible and an approach that produced enough evidence to continue."
+        },
+        {
+          "title": "Behavior versus representation",
+          "text": "Inspectable internal state made it possible to observe cases where useful environmental structure existed inside Kernel even when the behavioral policy could not yet exploit it successfully."
+        },
+        {
+          "title": "Capability ownership",
+          "text": "As the experimental harness became more sophisticated, the architecture increasingly constrained teachers, bridges, evaluators, and hosts so successful behavior could not quietly migrate out of the learner being studied."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Method",
+          "value": "Iterative experiments"
+        },
+        {
+          "label": "Evidence",
+          "value": "Behavior + diagnostics"
+        },
+        {
+          "label": "Runtime",
+          "value": "Local learner"
+        }
+      ],
+      "next": "Continue the research history by testing transfer into less curated visual environments and documenting whether previously learned structures, causal relationships, memory, and regulatory behavior remain useful when the task presentation changes."
+    }
+  ]
+}

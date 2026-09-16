@@ -16,6 +16,8 @@
 .project-status { padding: .25rem .5rem; background: #e8e4ff; color: #493ca9; letter-spacing: .02em; text-transform: none; }
 .project-card h3 { margin-bottom: 1rem; font-size: 1.55rem; font-weight: 600; letter-spacing: -.04em; }
 .project-card > p { color: var(--muted-light); line-height: 1.8; }
+.project-try-link { width: fit-content; display: inline-flex; align-items: center; gap: .55rem; margin: .15rem 0 1rem; color: #5f50ce; border-bottom: 1px solid currentColor; font-size: .84rem; font-weight: 700; }
+.project-try-link:hover { color: var(--ink); }
 .project-action { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: auto; padding-top: 1.1rem; border-top: 1px solid var(--line-light); font-size: .9rem; font-weight: 600; }
 .project-action:hover { color: #5f50ce; }
 .workflow-visual { min-height: 100%; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: center; background: radial-gradient(circle at 100% 0, rgba(130,114,255,.25), transparent 35%), var(--ink-soft); color: var(--white); }
@@ -26,6 +28,14 @@
 .workflow-node strong { font-weight: 500; }
 .workflow-node + .workflow-node::before { content: ""; position: absolute; left: 1.4rem; bottom: 100%; width: 1px; height: .7rem; background: var(--violet); }
 .workflow-note { margin-top: 1.4rem; color: var(--lavender); font-family: "DM Serif Display", Georgia, serif; font-size: 1.05rem; }
+.project-placeholder { position: relative; isolation: isolate; height: 100%; padding: 1.6rem; display: flex; flex-direction: column; overflow: hidden; background: linear-gradient(145deg, var(--ink-soft), #171d42); color: var(--white); }
+.project-placeholder::before { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .38; background: linear-gradient(90deg, transparent 49.7%, rgba(200,193,255,.14) 50%, transparent 50.3%), linear-gradient(0deg, transparent 49.7%, rgba(200,193,255,.1) 50%, transparent 50.3%); background-size: 4.5rem 4.5rem; transform: rotate(-9deg) scale(1.2); }
+.project-placeholder::after { content: ""; position: absolute; z-index: -1; width: 12rem; height: 12rem; top: -6rem; right: -4rem; border: 1px solid rgba(97,184,255,.35); border-radius: 50%; box-shadow: 0 0 0 2.5rem rgba(130,114,255,.06), 0 0 0 5rem rgba(130,114,255,.035); }
+.project-placeholder-number { color: var(--blue); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+.project-placeholder > strong { max-width: 8ch; margin: auto 0; color: var(--white); font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.8rem, 4.5vw, 4.4rem); font-weight: 400; line-height: .95; letter-spacing: -.055em; }
+.project-placeholder-footer { padding-top: 1rem; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-top: 1px solid rgba(200,193,255,.42); }
+.project-placeholder-footer span { color: var(--lavender); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; }
+.project-placeholder-footer small { color: var(--muted-dark); font-size: .72rem; text-align: right; }
 .earlier-work { margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--line-light); }
 .earlier-heading { display: flex; justify-content: space-between; gap: 2rem; margin-bottom: 1.7rem; }
 .earlier-heading .eyebrow { color: #5f50ce; }

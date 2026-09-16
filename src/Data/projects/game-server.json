@@ -1,0 +1,43 @@
+{
+  "slug": "game-server-info",
+  "name": ".NET Game Server",
+  "category": "Backend & security",
+  "status": "Research prototype",
+  "intro": "An authoritative multiplayer backend that became a practical study in translating a distrust-the-client security model into working software.",
+  "overview": [
+    "The Game Server began as an exercise in designing a multiplayer backend from an intentionally distrustful starting point: a client should be able to request a change, but it should not be treated as the authority that decides what becomes server truth. The early architecture decomposed the system around that assumption, separating user data, competitive scores, leaderboards, session logs, administrative data, and enforcement state while defining different read and mutation boundaries for players, administrators, and the server itself.",
+    "That architecture progressed into a substantial ASP.NET Core implementation backed by Entity Framework Core and SQL Server. The server added HTTP authentication, device-scoped refresh sessions, WebSocket gameplay sessions, modular game handlers, leaderboards, player data, a cosmetic economy, server-side scoring state, object lifecycle records, position history, and session telemetry. A later security review then tested the implementation against the project's own trust assumptions and exposed important places where the prototype violated them, turning the project into both a backend implementation and a concrete study in the difference between designing a security boundary and consistently enforcing it in code."
+  ],
+  "pages": [
+    {
+      "slug": "trust-model-to-implementation",
+      "title": "From Trust Model to Implementation",
+      "summary": "How an intentionally paranoid backend architecture became a working .NET server—and what happened when the implementation was audited against its own principles.",
+      "category": "Game Server deep dive",
+      "intro": "The server began with a simple security assumption: a player-controlled client can establish identity and make requests, but it cannot be trusted to decide authoritative competitive state.",
+      "overview": [
+        "Before implementation, the system was decomposed by authority. User data, scores, leaderboards, session logs, administrator records, and enforcement state were intended to have different read and mutation boundaries. Clients would never directly write authoritative storage; they would submit requests and the server would decide whether and how state changed.",
+        "Competitive integrity followed from that model. An online game session would receive a unique identity and produce periodic server-side evidence about game state. Score submission was intended to be checked against the history of that session rather than accepted simply because an authenticated client claimed a number. Offline play remained available, but offline-generated competitive state was intentionally prevented from later becoming trusted online state.",
+        "The architecture then became a real ASP.NET Core system. The implementation added SQL Server and Entity Framework persistence, JWT and refresh-token authentication, WebSocket sessions, modular game handlers, server-maintained scoring, object lifecycle records, positional history, leaderboards, player progression, cosmetics, and gameplay telemetry.",
+        "Implementation also demonstrated why a good threat model does not automatically produce secure software. A later adversarial review reproduced code paths that violated the project's own architectural assumptions: caller-supplied identity could cross account boundaries, ordinary players could reach administrative database functionality, stale credentials retained powers they should not have had, and multiple scoring/session paths could award illegitimate state.",
+        "That failure is part of the project rather than something hidden from the case study. The architecture provided a useful standard precisely because it made the implementation defects legible: several failures could be described as places where code accidentally allowed the client to become an authority again. The resulting security baseline and audit findings define what would need to change before the prototype could be considered for public exposure."
+      ],
+      "challenge": "Translate a distrust-the-client architecture into a large enough implementation that every authentication, session, scoring, economy, administration, and persistence path preserves the same authority rules.",
+      "approach": "Use the original threat model as an invariant rather than a design artifact that becomes irrelevant after coding starts. Implementation creates concrete enforcement mechanisms; adversarial testing then checks whether those mechanisms preserve the intended boundary across every path that can mutate authoritative state.",
+      "highlights": [
+        {
+          "title": "Authority before API design",
+          "text": "The system was first divided according to who could read, request, approve, and mutate each class of information."
+        },
+        {
+          "title": "Evidence-based competition",
+          "text": "Session telemetry, object histories, positional information, and server-maintained score state were explored as evidence for validating competitive claims rather than trusting submitted scores."
+        },
+        {
+          "title": "Failure as architecture feedback",
+          "text": "The later audit exposed concrete cases where implementation violated the intended model, turning security defects into actionable information about where architectural invariants had not survived coding."
+        }
+      ]
+    }
+  ]
+}

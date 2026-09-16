@@ -7,7 +7,13 @@
 .detail-title-row h1 { max-width: 1000px; margin: 0; font-size: clamp(3.4rem, 8vw, 7.8rem); font-weight: 500; letter-spacing: -.075em; line-height: .95; }
 .detail-status { margin-bottom: .8rem; padding: .5rem .75rem; border: 1px solid rgba(200,193,255,.42); color: var(--lavender); font-size: .78rem; }
 .detail-intro { max-width: 760px; margin: 3.4rem 0 0 auto; color: #d7d9e6; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(1.5rem, 3vw, 2.35rem); line-height: 1.35; }
+.detail-intro-wrap { max-width: 760px; margin-left: auto; }
+.detail-intro-wrap.has-action-only { margin-top: 2.5rem; }
+.detail-intro-wrap .detail-intro { margin-left: 0; }
+.detail-try-link { width: fit-content; display: inline-flex; align-items: center; gap: .6rem; margin-top: 1rem; color: var(--blue); border-bottom: 1px solid currentColor; font-size: .88rem; font-weight: 700; }
+.detail-try-link:hover { color: var(--white); }
 .project-detail-media { padding: 4.5rem 0 0; }
+.project-detail-media.has-no-image { padding-top: 2rem; }
 .detail-art { width: 100%; height: min(62vw, 46rem); overflow: hidden; background: var(--ink-soft); }
 .detail-art > img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
 .detail-facts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 2rem 0 4.5rem; border-bottom: 1px solid var(--line-light); }
@@ -20,12 +26,27 @@
 .project-story-grid .eyebrow, .project-next-grid .eyebrow { color: #5f50ce; padding-top: .65rem; }
 .project-copy { max-width: 850px; }
 .project-copy p { margin-bottom: 1.35rem; font-size: clamp(1.4rem, 2.4vw, 2.05rem); line-height: 1.5; letter-spacing: -.035em; }
+.project-copy .detail-try-link { color: #5f50ce; }
+.project-copy-entry { margin-bottom: 2rem; }
+.project-copy-entry > p { margin-bottom: 0; }
+.project-copy-entry figure { margin: 2rem 0 3rem; }
+.project-copy-entry figure img { width: 100%; max-height: 42rem; object-fit: cover; }
+.project-copy-entry figcaption { margin-top: .7rem; color: var(--muted-light); font-size: .78rem; }
 .project-decisions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 6rem; background: var(--line-light); border: 1px solid var(--line-light); }
 .project-decisions article { padding: 2.5rem; background: var(--paper); }
 .project-decisions article > span, .highlight-grid article > span { color: #5f50ce; font-size: .75rem; letter-spacing: .08em; }
 .project-decisions h2 { margin: 3rem 0 1rem; font-size: 1.7rem; letter-spacing: -.04em; }
 .project-decisions p, .highlight-grid p { margin: 0; color: var(--muted-light); line-height: 1.8; }
 .project-highlights { padding: 7rem 0; background: #e9e6fb; }
+.project-pages { padding: 7rem 0; background: var(--ink-soft); color: var(--white); }
+.project-pages .highlight-heading .eyebrow { color: var(--blue); }
+.project-page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.project-page-grid > a { min-height: 19rem; display: flex; flex-direction: column; padding: 2rem; border: 1px solid var(--line-dark); background: rgba(255,255,255,.025); transition: background .2s, border-color .2s, transform .2s; }
+.project-page-grid > a:hover { background: rgba(255,255,255,.07); border-color: rgba(200,193,255,.55); transform: translateY(-3px); }
+.project-page-grid > a > span { color: var(--blue); font-size: .75rem; }
+.project-page-grid h3 { margin: auto 0 .8rem; font-size: 1.7rem; letter-spacing: -.04em; }
+.project-page-grid p { color: var(--muted-dark); }
+.project-page-grid strong { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line-dark); font-size: .84rem; }
 .highlight-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 4rem; }
 .highlight-heading .eyebrow { color: #5f50ce; padding-top: .5rem; }
 .highlight-heading h2 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.4rem, 5vw, 4.6rem); font-weight: 400; line-height: 1.05; }
@@ -34,13 +55,8 @@
 .highlight-grid h3 { margin: auto 0 1rem; font-size: 1.35rem; letter-spacing: -.035em; }
 .project-next { padding: 7rem 0; background: var(--ink-soft); color: var(--white); }
 .project-next h2 { max-width: 850px; margin: 0 0 2.5rem; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.4rem, 5vw, 4.8rem); font-weight: 400; line-height: 1.08; }
-.detail-workflow { height: 100%; padding: clamp(2rem, 5vw, 5rem); display: grid; grid-template-columns: 1fr 3fr 1fr; align-items: center; gap: 3rem; background: radial-gradient(circle at 75% 20%, rgba(130,114,255,.33), transparent 28%), var(--ink-soft); color: var(--white); }
-.detail-workflow > span { color: var(--muted-dark); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
-.detail-workflow > div { display: grid; gap: .7rem; }
-.detail-workflow p { display: grid; grid-template-columns: 3rem 1fr; align-items: center; margin: 0; padding: 1.2rem; border: 1px solid rgba(200,193,255,.35); background: rgba(255,255,255,.05); }
-.detail-workflow small { color: var(--blue); }
-.detail-workflow strong { font-size: clamp(1.15rem, 2.5vw, 2rem); font-weight: 500; }
-.detail-workflow em { color: var(--lavender); font-family: "DM Serif Display", Georgia, serif; }
+.project-overview-link { width: fit-content; display: flex; gap: 1rem; margin-top: 1.6rem; color: var(--muted-dark); font-size: .86rem; }
+.project-overview-link:hover { color: var(--white); }
 .project-not-found { min-height: 80vh; padding: 12rem 0 8rem; background: var(--ink); color: var(--white); }
 .project-not-found h1 { max-width: 850px; margin: 1.25rem 0; font-size: clamp(3rem, 8vw, 7rem); line-height: 1; letter-spacing: -.07em; }
 .project-not-found > .container > p:not(.eyebrow) { margin-bottom: 2rem; color: var(--muted-dark); }
@@ -56,9 +72,8 @@
   .detail-facts > div:first-child { border-top: 0; }
   .project-story { padding: 5rem 0; }
   .project-story-grid, .project-next-grid, .highlight-heading { grid-template-columns: 1fr; gap: 1.5rem; }
-  .project-decisions, .highlight-grid { grid-template-columns: 1fr; }
+  .project-decisions, .highlight-grid, .project-page-grid { grid-template-columns: 1fr; }
   .project-decisions { margin-top: 4rem; }
   .project-decisions article, .highlight-grid article { min-height: 17rem; padding: 1.5rem; }
-  .project-highlights, .project-next { padding: 5rem 0; }
-  .detail-workflow { grid-template-columns: 1fr; align-content: center; gap: 1.5rem; }
+  .project-highlights, .project-pages, .project-next { padding: 5rem 0; }
 }

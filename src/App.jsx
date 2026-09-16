@@ -40,6 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:projectSlug" element={<ProjectDetail />} />
+          <Route path="/:projectSlug/:pageSlug" element={<ProjectDetail />} />
         </Routes>
         <Footer />
       </div>

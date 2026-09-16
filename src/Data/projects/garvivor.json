@@ -1,0 +1,43 @@
+{
+  "slug": "garvivor-info",
+  "name": "PvPvE Procedural Roguelike",
+  "category": "Game systems design",
+  "status": "Concept & prototype",
+  "intro": "A top-down PvPvE survivor roguelike where procedural loot, compatibility, corruption, enemies, and other players shape the same evolving match.",
+  "overview": [
+    "This project did not begin as a planned game. Its original repository was a small test client for exercising a .NET multiplayer game server during development of another project. Adding enough gameplay to meaningfully test networking and server behavior created new design questions, those questions produced additional mechanics, and feature creep gradually transformed the test environment into its own game concept. The repository continued to carry the deliberately mundane name 'Game Server Test Game' even after the design had become substantially more ambitious.",
+    "The resulting concept became a top-down PvPvE survivor roguelike influenced by the accessibility of Vampire Survivors and the player-consumption dynamics of Agar.io. Players begin each session relatively weak and build power from enemies, bosses, items, and other players. Instead of treating loot, PvP, PvE, progression, and difficulty as independent systems, the game was designed around their interaction: defeated players can transfer accumulated power, enemies can become more dangerous through successful kills, and item combinations can evolve into strong synergies, harmful incompatibilities, or deliberately tempting high-risk corrupted builds."
+  ],
+  "pages": [
+    {
+      "slug": "systems-design",
+      "title": "Designing the Game's Systems",
+      "summary": "How a server test client evolved into a PvPvE roguelike built around interacting systems rather than a fixed catalogue of upgrades.",
+      "category": "Systems design deep dive",
+      "intro": "The design became an experiment in making loot, progression, PvP, PvE, risk, and difficulty consequences of the same underlying systems.",
+      "overview": [
+        "The game's earliest identity was comparatively simple: combine the approachable top-down movement and automatic combat associated with survivor games with the predatory player-growth loop of Agar.io. Players and enemies would share the same space, and defeating another player could transfer the value they had accumulated during the match.",
+        "That immediately created a snowball problem. If power simply accumulated numerically, the strongest player could become increasingly difficult to challenge. Item design therefore moved toward compatibility rather than raw accumulation. Procedurally generated attributes occupy an alignment-like space, and the relationship between a player's items helps determine whether the resulting build becomes stable, synergistic, incompatible, or dangerously unstable.",
+        "Compatible items can evolve into stronger combined forms, but incompatibility is not represented by a single generic penalty. The design developed multiple undesirable regions: combinations that are simply harmful and combinations that are extraordinarily powerful but carry severe side effects. The middle of the compatibility space provides dependable synergy while the extremes tempt players into increasingly volatile builds.",
+        "The environment participates in the same escalation. PvE enemies and bosses were explored as actors capable of becoming stronger through successful kills, allowing player mistakes and conflicts to alter the danger of the session itself. A monster that kills players can therefore become a shared problem, while players can intentionally manipulate PvE threats against one another.",
+        "The result is a design where individual mechanics are intentionally difficult to evaluate in isolation. Loot changes build stability; build stability changes the value of killing another player; player deaths redistribute power; enemy kills alter PvE pressure; and visible loot can force players to decide whether an attractive pickup is worth destabilizing an otherwise coherent build. Replayability comes primarily from those interactions rather than from selecting among a fixed set of handcrafted builds."
+      ],
+      "challenge": "Create enough procedural variation to make each match meaningfully different without turning builds into arbitrary randomness or allowing accumulated power to make the outcome increasingly predetermined.",
+      "approach": "Use shared systemic rules to create consequences across mechanics. Items participate in a compatibility model, kills redistribute accumulated value, enemies can participate in escalation, and corruption introduces nonlinear risk. The design favors interactions that create new situations over adding independent features that only increase content count.",
+      "highlights": [
+        {
+          "title": "Procedural relationships",
+          "text": "Generated items matter partly because of how they relate to the rest of the build, making procedural generation a source of strategic structure rather than just randomized numbers."
+        },
+        {
+          "title": "Nonlinear risk",
+          "text": "Bad compatibility is divided between genuine dysfunction and intentionally tempting high-risk power, preventing the build space from collapsing into one obvious optimum."
+        },
+        {
+          "title": "Emergent match pressure",
+          "text": "Players, bosses, enemies, loot, and transferred power can influence one another, allowing the history of a match to help determine its future difficulty."
+        }
+      ]
+    }
+  ]
+}

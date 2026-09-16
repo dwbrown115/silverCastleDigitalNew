@@ -3,38 +3,19 @@ import {
   moolathonPreview,
 } from "./Project Images";
 import { Link } from "react-router-dom";
+import { projectsBySlug } from "../../Data/projects";
 import "./projects.scss";
 
-const currentProjects = [
-  {
-    name: "Recall Harbor",
-    type: "Knowledge & memory",
-    status: "Web app available",
-    description: "A private home for useful ideas, notes, and conversations—with imports, search, tags, and an optional ChatGPT connection.",
-    image: "/projects/recall-harbor.png",
-    imageAlt: "A quiet harbor protected by an illuminated stone breakwater",
-    slug: "recall-harbor-info",
-    action: "View project",
-  },
-  {
-    name: "KJR: Take To The Sky",
-    type: "Games & play",
-    status: "Nearing release",
-    description: "A playful endless climber where a kitten bounces from rooftops to the stars, collecting mice and unlocking new feline companions.",
-    image: "/projects/kjr.png",
-    imageAlt: "An orange kitten leaping above rooftops toward a mouse on a red balloon",
-    slug: "kjr-info",
-    action: "View project",
-  },
-  {
-    name: "Automatic Task Helper",
-    type: "Tools & automation",
-    status: "In development",
-    description: "A desktop app that turns repetitive browser work into reusable queues of clicks, text entry, navigation, waits, and conditional steps.",
-    slug: "automatic-task-helper-info",
-    action: "View project",
-  },
+const projectOrder = [
+  "recall-harbor-info",
+  "kernel-info",
+  "kjr-info",
+  "automatic-task-helper-info",
+  "game-server-info",
+  "garvivor-info",
 ];
+
+const currentProjects = projectOrder.map((slug) => projectsBySlug[slug]).filter(Boolean);
 
 const earlierProjects = [
   {
@@ -70,6 +51,19 @@ function WorkflowVisual() {
   );
 }
 
+function renderProjectPlaceholder(project, index) {
+  return (
+    <div className="project-placeholder" aria-label={`${project.name}: ${project.category}`} role="img">
+      <span className="project-placeholder-number">Project {String(index + 1).padStart(2, "0")}</span>
+      <strong>{project.name}</strong>
+      <div className="project-placeholder-footer">
+        <span>{project.category}</span>
+        <small>{project.status}</small>
+      </div>
+    </div>
+  );
+}
+
 function Projects() {
   return (
     <section className="projects" id="projects" aria-labelledby="projects-heading">
@@ -78,22 +72,28 @@ function Projects() {
           <p className="eyebrow">01 / Selected work</p>
           <div>
             <h2 id="projects-heading">Things I’m building.<br /><em>Things I actually use.</em></h2>
-            <p>Three active projects aimed at memory, play, and the repetitive parts of working online.</p>
+            <p>Six active projects spanning knowledge continuity, adaptive cognition, games, automation, and secure backend systems.</p>
           </div>
         </div>
 
         <div className="current-projects">
-          {currentProjects.map((project) => {
+          {currentProjects.map((project, index) => {
+            const tryHere = project.tryHere;
             return (
               <article className={`project-card project-card-${project.name.toLowerCase().replaceAll(/[^a-z]+/g, "-")}`} key={project.name}>
                 <div className="project-art">
-                  {project.image ? <img src={project.image} alt={project.imageAlt} loading="lazy" /> : <WorkflowVisual />}
+                  {project.image ? <img src={project.image} alt={project.imageAlt || ""} loading="lazy" /> : project.slug === "automatic-task-helper-info" ? <WorkflowVisual /> : renderProjectPlaceholder(project, index)}
                 </div>
-                <div className="project-meta"><span>{project.type}</span><span className="project-status">{project.status}</span></div>
+                <div className="project-meta"><span>{project.category}</span><span className="project-status">{project.status}</span></div>
                 <h3>{project.name}</h3>
-                <p>{project.description}</p>
+                <p>{project.intro}</p>
+                {tryHere && (
+                  <a className="project-try-link" href={tryHere.href} {...(tryHere.external ? { target: "_blank", rel: "noreferrer" } : {})}>
+                    {tryHere.label || "Try here"}<span aria-hidden="true">↗</span>
+                  </a>
+                )}
                 <Link className="project-action" to={`/${project.slug}`}>
-                  {project.action}<span aria-hidden="true">↗</span>
+                  View project<span aria-hidden="true">↗</span>
                 </Link>
               </article>
             );

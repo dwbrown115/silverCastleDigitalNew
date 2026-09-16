@@ -4,11 +4,9 @@
   "category": "Tools & automation",
   "status": "In development",
   "intro": "A desktop tool for turning repetitive browser work into reusable, understandable workflows.",
-  "image": null,
-  "imageAlt": "",
   "overview": [
-    "Automatic Task Helper is for browser jobs that are too repetitive to do by hand and too specific to justify a custom integration.",
-    "A workflow can combine navigation, clicks, text entry, waits, and conditional steps. The goal is to make useful automation feel more like describing a routine than programming a bot."
+    "Automatic Task Helper started with a very specific frustration: applying for jobs meant repeatedly navigating different application sites, entering the same information, and performing nearly identical browser actions. The first instinct was effectively to build a better job-application automator. Instead of tying the solution to one site or one application flow, the project evolved toward a more general question: could the repetitive browser actions themselves become reusable building blocks?",
+    "That shift turned the project into a Python desktop application for constructing browser-action queues. A user can define navigation, clicks, text input, delays, repeats, bulk operations, fallbacks, and conditional actions; preview which page elements a step will target; save the resulting workflow; and run it again later. What began as personal job-search automation became a general-purpose browser workflow tool that is functional for personal use while its remaining work is increasingly about hardening and productization rather than proving the core concept."
   ],
   "challenge": "Let people automate fragile browser tasks while keeping every step visible enough to understand, adjust, and trust.",
   "approach": "Treat browser work as a sequence of observable actions, then give an agent enough context to help build and recover those sequences without hiding what it is doing.",
