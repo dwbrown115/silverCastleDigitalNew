@@ -2,6 +2,7 @@ import {
   infiniteworldswikicapture,
   moolathonPreview,
 } from "./Project Images";
+import { Link } from "react-router-dom";
 import "./projects.scss";
 
 const currentProjects = [
@@ -12,8 +13,8 @@ const currentProjects = [
     description: "A private home for useful ideas, notes, and conversations—with imports, search, tags, and an optional ChatGPT connection.",
     image: "/projects/recall-harbor.png",
     imageAlt: "A quiet harbor protected by an illuminated stone breakwater",
-    url: "https://recallharbor.app/",
-    action: "Explore Recall Harbor",
+    slug: "recall-harbor-info",
+    action: "View project",
   },
   {
     name: "KJR: Take To The Sky",
@@ -22,16 +23,16 @@ const currentProjects = [
     description: "A playful endless climber where a kitten bounces from rooftops to the stars, collecting mice and unlocking new feline companions.",
     image: "/projects/kjr.png",
     imageAlt: "An orange kitten leaping above rooftops toward a mouse on a red balloon",
-    action: "Ask about KJR",
-    subject: "KJR: Take To The Sky",
+    slug: "kjr-info",
+    action: "View project",
   },
   {
     name: "Automatic Task Helper",
     type: "Tools & automation",
     status: "In development",
     description: "A desktop app that turns repetitive browser work into reusable queues of clicks, text entry, navigation, waits, and conditional steps.",
-    action: "Ask about Task Helper",
-    subject: "Automatic Task Helper",
+    slug: "automatic-task-helper-info",
+    action: "View project",
   },
 ];
 
@@ -83,7 +84,6 @@ function Projects() {
 
         <div className="current-projects">
           {currentProjects.map((project) => {
-            const href = project.url || `mailto:dakota.w.brown@silvercastledigital.com?subject=${encodeURIComponent(project.subject)}`;
             return (
               <article className={`project-card project-card-${project.name.toLowerCase().replaceAll(/[^a-z]+/g, "-")}`} key={project.name}>
                 <div className="project-art">
@@ -92,9 +92,9 @@ function Projects() {
                 <div className="project-meta"><span>{project.type}</span><span className="project-status">{project.status}</span></div>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
-                <a className="project-action" href={href} {...(project.url ? { target: "_blank", rel: "noreferrer" } : {})}>
+                <Link className="project-action" to={`/${project.slug}`}>
                   {project.action}<span aria-hidden="true">↗</span>
-                </a>
+                </Link>
               </article>
             );
           })}

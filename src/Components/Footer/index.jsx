@@ -12,12 +12,12 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-top">
-        <a className="brand footer-brand" href="#hero">
+        <a className="brand footer-brand" href="/#hero">
           <img src="/silverCastleDigitalLogoVector.svg" alt="" width="414" height="512" />
           <span>Silver Castle Digital</span>
         </a>
         <p>Independent thinking.<br />Useful things.</p>
-        <a href="#hero">Back to top <span aria-hidden="true">↑</span></a>
+        <a href="/#hero">Back to top <span aria-hidden="true">↑</span></a>
       </div>
       <div className="container footer-links">
         <div className="social-links">{socials.map(([name, url]) => <a href={url} target="_blank" rel="noreferrer" key={name}>{name}</a>)}</div>

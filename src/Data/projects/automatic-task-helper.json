@@ -1,0 +1,27 @@
+{
+  "slug": "automatic-task-helper-info",
+  "name": "Automatic Task Helper",
+  "category": "Tools & automation",
+  "status": "In development",
+  "intro": "A desktop tool for turning repetitive browser work into reusable, understandable workflows.",
+  "image": null,
+  "imageAlt": "",
+  "overview": [
+    "Automatic Task Helper is for browser jobs that are too repetitive to do by hand and too specific to justify a custom integration.",
+    "A workflow can combine navigation, clicks, text entry, waits, and conditional steps. The goal is to make useful automation feel more like describing a routine than programming a bot."
+  ],
+  "challenge": "Let people automate fragile browser tasks while keeping every step visible enough to understand, adjust, and trust.",
+  "approach": "Treat browser work as a sequence of observable actions, then give an agent enough context to help build and recover those sequences without hiding what it is doing.",
+  "highlights": [
+    { "title": "Reusable queues", "text": "Capture a routine once, then run the same sequence again when the work returns." },
+    { "title": "Human-readable steps", "text": "Clicks, entries, waits, and checks stay visible instead of disappearing into code." },
+    { "title": "Built for the messy web", "text": "Conditional steps help workflows handle pages that do not behave exactly the same every time." }
+  ],
+  "facts": [
+    { "label": "Role", "value": "Product, UX & development" },
+    { "label": "Focus", "value": "Browser automation" },
+    { "label": "Stage", "value": "Active development" }
+  ],
+  "next": "Improve workflow recovery and make building a first automation faster.",
+  "primaryAction": { "label": "Ask about Task Helper", "href": "mailto:dakota.w.brown@silvercastledigital.com?subject=Automatic%20Task%20Helper" }
+}

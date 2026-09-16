@@ -1,0 +1,27 @@
+{
+  "slug": "recall-harbor-info",
+  "name": "Recall Harbor",
+  "category": "Knowledge & memory",
+  "status": "Web app available",
+  "intro": "A private place to keep useful ideas, notes, and conversations within reach.",
+  "image": "/projects/recall-harbor.png",
+  "imageAlt": "A quiet harbor protected by an illuminated stone breakwater",
+  "overview": [
+    "Recall Harbor grew out of a problem I kept running into: valuable context was scattered across notes, chats, and half-remembered ideas.",
+    "The product brings that material into one calm, searchable home. Imports, tags, and an optional ChatGPT connection make it easier to recover the right thought when it becomes useful again."
+  ],
+  "challenge": "Make personal knowledge easy to capture without turning it into another system that needs constant maintenance.",
+  "approach": "Start with the moments where memory breaks down, then use agentic workflows to reduce the work between saving something and finding it again.",
+  "highlights": [
+    { "title": "Bring it together", "text": "Import useful material from the places where it already lives." },
+    { "title": "Find the thread", "text": "Search and tags make old context available when a new problem brings it back into focus." },
+    { "title": "Keep it private", "text": "Designed as a personal knowledge space rather than a public feed." }
+  ],
+  "facts": [
+    { "label": "Role", "value": "Product, design & development" },
+    { "label": "Focus", "value": "Memory, retrieval & AI" },
+    { "label": "Stage", "value": "Available now" }
+  ],
+  "next": "Continue refining the capture and retrieval loop around real daily use.",
+  "primaryAction": { "label": "Visit Recall Harbor", "href": "https://recallharbor.app/", "external": true }
+}

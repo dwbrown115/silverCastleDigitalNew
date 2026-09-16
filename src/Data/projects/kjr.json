@@ -1,0 +1,27 @@
+{
+  "slug": "kjr-info",
+  "name": "KJR: Take To The Sky",
+  "category": "Games & play",
+  "status": "Nearing release",
+  "intro": "An endless climber about a determined kitten, a trail of mice, and the sky above the rooftops.",
+  "image": "/projects/kjr.png",
+  "imageAlt": "An orange kitten leaping above rooftops toward a mouse on a red balloon",
+  "overview": [
+    "KJR is a small game built around one clear feeling: the delight of getting a little farther than you did last time.",
+    "You guide a kitten from rooftops toward the stars, collecting mice along the way and unlocking new feline companions. The work spans the game loop, visual identity, progression, and the details that make another run feel irresistible."
+  ],
+  "challenge": "Keep the controls immediate and the premise charming while giving repeated runs enough variety and progression to stay interesting.",
+  "approach": "Build the smallest satisfying loop first, play it constantly, then use agentic tools to move faster through assets, balancing, and implementation without losing a coherent point of view.",
+  "highlights": [
+    { "title": "Pick up and play", "text": "A simple climbing loop designed to make sense in seconds." },
+    { "title": "A reason to return", "text": "Collectible mice and unlockable cats give each run a larger purpose." },
+    { "title": "Made through play", "text": "Mechanics and pacing are shaped by frequent hands-on testing." }
+  ],
+  "facts": [
+    { "label": "Role", "value": "Game design & development" },
+    { "label": "Format", "value": "Endless climber" },
+    { "label": "Stage", "value": "Nearing release" }
+  ],
+  "next": "Final tuning, release preparation, and the last round of feel-good polish.",
+  "primaryAction": { "label": "Ask about KJR", "href": "mailto:dakota.w.brown@silvercastledigital.com?subject=KJR%3A%20Take%20To%20The%20Sky" }
+}
