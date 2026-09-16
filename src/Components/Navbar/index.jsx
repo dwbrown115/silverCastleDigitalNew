@@ -1,66 +1,40 @@
-import React, { useState, useEffect } from "react";
-
+import { useEffect, useRef, useState } from "react";
 import "./navbar.scss";
+
 function Navbar() {
-  const [backgroundColor, setBackgroundColor] = useState("transparent");
-  const [top, setTop] = useState("top");
+  const [open, setOpen] = useState(false);
+  const menuButton = useRef(null);
 
   useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        setBackgroundColor("#634DD1");
-        setTop("moved");
-      } else {
-        setBackgroundColor("transparent");
-        setTop("top");
+    const onKeyDown = (event) => {
+      if (event.key === "Escape" && open) {
+        setOpen(false);
+        menuButton.current?.focus();
       }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
-  function scrollTo(name) {
-    const element = document.getElementById(name);
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  const close = () => setOpen(false);
 
   return (
-    <div
-      className="Navbar"
-      style={{
-        backgroundColor,
-        boxShadow:
-          top === "top"
-            ? "0 12px 20px 0 rgba(0, 0, 0, 0), 0 4px 10px 0 rgba(0, 0, 0, 0)"
-            : "0 12px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2)",
-      }}
-    >
-      <div onClick={() => scrollTo("hero")} className="Logo">
-        <img
-          className="LogoImage"
-          src={"./silverCastleDigitalLogoVector.svg"}
-          alt="silverCastleDigitalLogo.svg"
-        />
+    <header className="site-header">
+      <div className="container header-inner">
+        <a className="brand" href="#hero" onClick={close} aria-label="Silver Castle Digital home">
+          <img src="/silverCastleDigitalLogoVector.svg" alt="" width="414" height="512" />
+          <span>Silver Castle Digital</span>
+        </a>
+        <button ref={menuButton} className="menu-button" type="button" aria-expanded={open} aria-controls="site-navigation" onClick={() => setOpen(!open)}>
+          {open ? "Close" : "Menu"}<span aria-hidden="true">{open ? "−" : "+"}</span>
+        </button>
+        <nav id="site-navigation" className={open ? "site-navigation is-open" : "site-navigation"} aria-label="Main navigation">
+          <a href="#projects" onClick={close}>Projects</a>
+          <a href="#approach" onClick={close}>Approach</a>
+          <a className="nav-cta" href="#contact" onClick={close}>Start a conversation <span aria-hidden="true">↗</span></a>
+        </nav>
       </div>
-      <div className="NavbarElements">
-        <div onClick={() => scrollTo("services")} className="NavbarElement">
-          Services
-        </div>
-        <div onClick={() => scrollTo("projects")} className="NavbarElement">
-          Projects
-        </div>
-        {/* <div onClick={() => scrollTo("team")} className="NavbarElement">
-          Team
-        </div> */}
-        <div onClick={() => scrollTo("contact")} className="ContactButton">
-          Get a Quote
-        </div>
-      </div>
-    </div>
+    </header>
   );
 }
 

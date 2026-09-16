@@ -1,28 +1,20 @@
-import { Navbar, Footer, MobileNav } from "./Components";
-import {
-  Hero,
-  Services,
-  Projects,
-  // Team,
-  Contact,
-} from "./Sections";
-
+import { Navbar, Footer } from "./Components";
+import { Hero, Services, Projects, Contact } from "./Sections";
 import "./App.scss";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <Navbar />
-        <MobileNav />
+    <div className="App">
+      <a className="skip-link" href="#main">Skip to content</a>
+      <Navbar />
+      <main id="main">
         <Hero />
-        <Services />
         <Projects />
-        {/* <Team /> */}
+        <Services />
         <Contact />
-        <Footer />
-      </div>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
 
 import "./card.scss";
 function Card({ Logo, Preview, Link, Description }) {
@@ -25,7 +25,7 @@ function Card({ Logo, Preview, Link, Description }) {
   }
 
   return (
-    <a className="Card" href={Link} target="_blank">
+    <a className="Card" href={Link} target="_blank" rel="noreferrer">
       {/* <img className="Logo" src={`${Logo}`} alt="Logo" />
       <img className="Preview" src={`${Preview}`} alt="Preview" /> */}
       {isImageURL(Logo) === false ? (

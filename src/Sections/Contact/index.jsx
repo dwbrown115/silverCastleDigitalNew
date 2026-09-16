@@ -1,29 +1,24 @@
-import React from "react";
-
 import { ContactForm } from "../../Components";
-
 import "./contact.scss";
 
 function Contact() {
   return (
-    <div className="Contact" style={{ position: "relative" }}>
-      <div
-        id="contact"
-        style={{ position: "absolute", top: -110, right: "50%" }}
-      />
-      {/* <h1>Contact</h1> */}
-      <div className="Header">
-        <h1>Contact</h1>
-        <hr />
-      </div>
-      <div className="contactContent">
-        <ContactForm />
-        <div className="contactText">
-          Whatever kind of website your company needs, we are here to make those
-          dreams a reality.
+    <section className="contact" id="contact" aria-labelledby="contact-heading">
+      <div className="container">
+        <p className="eyebrow">03 / Get in touch</p>
+        <div className="contact-title-row">
+          <h2 id="contact-heading">Have a problem worth<br /><em>building around?</em></h2>
+          <a className="contact-email-button" href="mailto:dakota.w.brown@silvercastledigital.com" aria-label="Email Dakota Brown"><span aria-hidden="true">↗</span></a>
+        </div>
+        <div className="contact-grid">
+          <div className="contact-copy">
+            <p>Interesting workflows, useful tools, and ideas that keep asking to become real—I’d like to hear what you’re thinking about.</p>
+            <a href="mailto:dakota.w.brown@silvercastledigital.com">dakota.w.brown@silvercastledigital.com</a>
+          </div>
+          <ContactForm />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

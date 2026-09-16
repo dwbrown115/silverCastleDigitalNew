@@ -1,45 +1,34 @@
-import React from "react";
-
-// import { CardOcto } from "../../Components";
-import { CardOcto } from "../../Components";
+import { portrait } from "../../Assets";
 import "./services.scss";
-function Services() {
-  const services = [
-    {
-      Header: "Design Consultation",
-      Text: "Using the power of artificial intelligence we quickly and efficiently go through possible designs with to meet your needs",
-    },
-    {
-      Header: "Prototype Design",
-      Text: "We then turn those design candidates into real designs using design software like Figma and Adobe XD",
-    },
-    {
-      Header: "Web Development",
-      Text: "We then turn those designs into real websites using React and other web technologies",
-    },
-    {
-      Header: "Deployment",
-      Text: "We then deploy those websites to the web using AWS or your deployment service of choice",
-    },
-  ];
 
+const principles = [
+  ["01", "Start with a real need", "A repetitive task, an awkward workflow, or a tool I keep wishing existed."],
+  ["02", "Build with agents", "I direct agentic systems to explore, implement, test, and refine—with judgment steering the work."],
+  ["03", "Use what I make", "Daily use exposes what matters. The product gets better because I’m also the person depending on it."],
+];
+
+function Services() {
   return (
-    <div className="Services" style={{ position: "relative" }}>
-      <div
-        id="services"
-        style={{ position: "absolute", top: -110, right: "50%" }}
-      />
-      <div className="Header">
-        <h1>Services</h1>
-        <hr />
+    <section className="approach" id="approach" aria-labelledby="approach-heading">
+      <div className="container approach-grid">
+        <div className="approach-copy">
+          <p className="eyebrow">02 / The approach</p>
+          <h2 id="approach-heading">Small practice.<br /><em>Personal stake.</em></h2>
+          <p className="approach-lead">I’m Dakota. Silver Castle Digital is where I build the things I want to exist.</p>
+          <p>I work directly with agentic systems to move from an idea to functioning software, then keep improving it through real use. That makes the process unusually fast without losing the human decisions that make a product worth using.</p>
+          <a className="text-link" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure className="portrait-frame">
+          <img src={portrait} alt="Dakota Brown, founder of Silver Castle Digital" loading="lazy" />
+          <figcaption><span>Dakota Brown</span><span>Builder & founder</span></figcaption>
+        </figure>
       </div>
-      <div className="cardWrapper">
-        {services.map((service, index) => (
-          // <CardOcto key={index} Header={service.Header} Text={service.Text} />
-          <CardOcto key={index} Header={service.Header} Text={service.Text} />
+      <div className="container principle-list">
+        {principles.map(([number, title, description]) => (
+          <article key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

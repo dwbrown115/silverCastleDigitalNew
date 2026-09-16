@@ -1,8 +1,19 @@
-# React + Vite
+# Silver Castle Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The current Silver Castle Digital portfolio and independent software practice website.
 
-Currently, two official plugins are available:
+This React/Vite site presents active projects, earlier work, the agentic building approach, and a contact form. It retains the castle mark, indigo/blue identity, original portfolio records, social links, and EmailJS integration from the latest site while updating the design and current positioning.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Development
+
+Install dependencies with `npm install`, start the local site with `npm run dev`, and create a production build with `npm run build`.
+
+## Contact form
+
+The contact form uses these environment variables when configured:
+
+- `VITE_EMAILJS_SERVICE_ID`
+- `VITE_EMAILJS_TEMPLATE_ID`
+- `VITE_EMAILJS_PUBLIC_KEY`
+
+Without them, submitting opens a prefilled email to `dakota.w.brown@silvercastledigital.com`.
