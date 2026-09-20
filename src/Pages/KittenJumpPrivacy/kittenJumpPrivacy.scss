@@ -1,0 +1,30 @@
+.privacy-page { background: var(--paper); color: var(--ink); }
+.privacy-shell { width: min(100% - 112px, 820px); margin-inline: auto; }
+.privacy-hero { padding: 9rem 0 5rem; background: radial-gradient(circle at 85% 5%, rgba(130, 114, 255, .28), transparent 28rem), var(--ink); color: var(--white); }
+.privacy-hero .eyebrow { margin-bottom: 1.2rem; }
+.privacy-hero h1 { margin-bottom: 1rem; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(3.5rem, 8vw, 6.4rem); font-weight: 400; line-height: .95; letter-spacing: -.05em; }
+.privacy-updated { margin-bottom: 2.5rem; color: var(--muted-dark); font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; }
+.privacy-lead { max-width: 720px; margin-bottom: 0; color: #d9dbea; font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.8; }
+.privacy-lead a { color: var(--lavender); border-bottom: 1px solid currentColor; overflow-wrap: anywhere; }
+.privacy-content { padding: 5rem 0 7rem; }
+.privacy-content section { padding: 2.7rem 0; border-bottom: 1px solid var(--line-light); }
+.privacy-content h2 { margin-bottom: 1.25rem; font-size: clamp(1.65rem, 3vw, 2.25rem); line-height: 1.2; letter-spacing: -.035em; }
+.privacy-content h3 { margin: 2rem 0 .75rem; font-size: 1rem; letter-spacing: -.015em; }
+.privacy-content p, .privacy-content li { color: var(--muted-light); line-height: 1.85; }
+.privacy-content p:last-child { margin-bottom: 0; }
+.privacy-content ul { margin: .75rem 0 1.5rem; padding-left: 1.25rem; }
+.privacy-content li + li { margin-top: .55rem; }
+.privacy-content li a { color: #493ca9; border-bottom: 1px solid rgba(73, 60, 169, .35); }
+.privacy-notice { margin-bottom: 1rem; padding: 1.4rem 1.5rem; border-left: 3px solid var(--violet); background: #e8e4ff; }
+.privacy-notice strong { display: block; margin-bottom: .35rem; color: #493ca9; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.privacy-notice p { margin: 0; color: #3f3b60; line-height: 1.65; }
+.privacy-contact { display: inline-flex; align-items: center; gap: .7rem; margin-top: .5rem; padding-bottom: .35rem; border-bottom: 1px solid currentColor; color: #493ca9; font-weight: 700; }
+
+@media (max-width: 1050px) { .privacy-shell { width: min(100% - 72px, 820px); } }
+@media (max-width: 700px) {
+  .privacy-shell { width: calc(100% - 40px); }
+  .privacy-hero { padding: 7rem 0 3.5rem; }
+  .privacy-content { padding: 2.5rem 0 5rem; }
+  .privacy-content section { padding: 2.2rem 0; }
+  .privacy-notice { padding: 1.2rem; }
+}

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Navbar, Footer } from "./Components";
 import { Hero, Services, Projects, Contact } from "./Sections";
 import ProjectDetail from "./Pages/ProjectDetail";
+import KittenJumpPrivacy from "./Pages/KittenJumpPrivacy";
 import "./App.scss";
 
 function Home() {
@@ -39,6 +40,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy/kitten-jump" element={<KittenJumpPrivacy />} />
           <Route path="/:projectSlug" element={<ProjectDetail />} />
           <Route path="/:projectSlug/:pageSlug" element={<ProjectDetail />} />
         </Routes>

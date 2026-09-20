@@ -20,7 +20,10 @@ function Footer() {
         <a href="/#hero">Back to top <span aria-hidden="true">↑</span></a>
       </div>
       <div className="container footer-links">
-        <div className="social-links">{socials.map(([name, url]) => <a href={url} target="_blank" rel="noreferrer" key={name}>{name}</a>)}</div>
+        <div className="social-links">
+          {socials.map(([name, url]) => <a href={url} target="_blank" rel="noreferrer" key={name}>{name}</a>)}
+          <a href="/privacy/kitten-jump">KJR privacy</a>
+        </div>
         <span>© {new Date().getFullYear()} Silver Castle Digital</span>
       </div>
     </footer>
