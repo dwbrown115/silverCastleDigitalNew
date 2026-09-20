@@ -18,15 +18,15 @@ function KittenJumpPrivacy() {
           <h1>Privacy policy</h1>
           <p className="privacy-updated">Last updated September 20, 2026</p>
           <p className="privacy-lead">
-            SilverCastle Digital provides KJR: Take To The Sky (the “game”). This policy describes the Android game&apos;s handling of information. For privacy questions, contact <a href={`mailto:${privacyEmail}`}>{privacyEmail}</a>.
+            SilverCastle Digital provides KJR: Take To The Sky (the “game”). This policy describes the Android game&apos;s handling of information, including privacy controls introduced with internal-test revision 3. For privacy questions, contact <a href={`mailto:${privacyEmail}`}>{privacyEmail}</a>.
           </p>
         </div>
       </header>
 
       <div className="privacy-shell privacy-content">
         <aside className="privacy-notice" aria-label="Release status">
-          <strong>Internal-test release</strong>
-          <p>Advertising remains blocked while privacy setup is incomplete. Consent controls and age-specific advertising rules are still being prepared.</p>
+          <strong>Internal-test revision 3</strong>
+          <p>Earlier installed versions may not include the revision 3 privacy controls described here; update through the internal test program to receive them.</p>
         </aside>
 
         <section>
@@ -43,9 +43,10 @@ function KittenJumpPrivacy() {
 
         <section>
           <h2>Advertising and privacy choices</h2>
-          <p>The game includes optional rewarded-video offers and advertising between eligible runs. Advertising is provided through Unity LevelPlay and its configured providers, including Unity Ads. When advertising services are used, they may collect or share device identifiers, approximate location, ad interactions and technical information. Diagnostics may also be collected. These services use information for ad delivery and measurement, analytics, security and fraud prevention. Approximate location can be inferred from an IP address; this is different from precise GPS location.</p>
-          <p>Ad availability depends on privacy eligibility, connectivity and provider availability. Saving and editing a kitten remain free when videos are unavailable. The current internal-test release blocks advertising until its privacy setup is complete.</p>
-          <p>Google&apos;s User Messaging Platform is being integrated to manage advertising privacy notices and choices. Until that integration is enabled and verified, it must not be understood as an available consent control in every installed version. This policy will be updated alongside the release that enables it. Rejecting personalized advertising is not itself a requirement to purchase Ad-Free.</p>
+          <p>The game includes optional rewarded-video offers and advertising between eligible runs. Advertising is provided through Unity LevelPlay, currently with the ironSource advertising network enabled. The Unity Ads SDK is included in the app but its advertising network is not currently enabled in the mediation configuration. When advertising services are used, they may collect or share device identifiers, approximate location, ad interactions and technical information. Diagnostics may also be collected. These services use information for ad delivery and measurement, analytics, security and fraud prevention. Approximate location can be inferred from an IP address; this is different from precise GPS location.</p>
+          <p>For players who select 18 or older, the game uses Google&apos;s User Messaging Platform to check applicable advertising privacy requirements and present required notices and choices. Advertising remains unavailable if the app&apos;s privacy configuration or eligibility check does not permit it. The game checks consent information on launch rather than treating a previous choice as permanent permission.</p>
+          <p>Open <strong>Settings → Privacy choices &amp; policy</strong> to view your age range, open this policy, and access applicable advertising privacy choices. Depending on the privacy service&apos;s requirements, the control may offer to review choices or retry a privacy check. Applicable consent choices can be revisited. The game also applies a conservative sale/sharing opt-out signal to its supported advertising providers; providers handle that signal under their own policies.</p>
+          <p>Rejecting personalized advertising does not itself require buying Ad-Free, and permission to request an ad is not treated as permission for every form of personalized advertising. Ad availability depends on privacy eligibility, connectivity and provider availability. Saving and editing a kitten remain free when videos are unavailable. Choosing an age range does not grant an Ad-Free purchase or a rewarded-video unlock.</p>
           <h3>Provider information</h3>
           <ul>
             <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noreferrer">Unity privacy policies for game players and app users <span aria-hidden="true">↗</span></a></li>
@@ -55,9 +56,11 @@ function KittenJumpPrivacy() {
         </section>
 
         <section>
-          <h2>Younger players</h2>
-          <p>The game is not specifically directed at children. However, younger people may play it. The current internal-test release does not serve ads while privacy setup is incomplete. Age-specific advertising and consent rules are still being prepared; this policy does not claim that an age-verification or parental-consent system is already operating.</p>
-          <p>Before advertising is enabled for younger players, the game&apos;s age handling, ad-provider settings and notices must be updated to reflect the implemented protections. A parent or guardian with a concern about a child&apos;s information can contact us using the email above. Please do not send identity documents or a child&apos;s full date of birth in an initial email.</p>
+          <h2>Age ranges and younger players</h2>
+          <p>The game is not specifically directed at children. However, younger people may play it. Revision 3 asks for a broad age range: under 13, 13–15, 16–17, or 18 or older. You can also choose not to provide a range. The selected range is stored locally on your device. We do not ask for your birthday or identity documents through this screen; it is a self-reported preference, not identity or age verification.</p>
+          <p>In this version, players in any under-18 range, and players with no age range provided, do not start the game&apos;s advertising SDK. Distinct younger-player ranges are retained, but advertising for those ranges is not enabled yet. This restriction does not grant free purchased content or an ad-based kitten-use unlock. Saved kittens remain available to save, edit and share, and the game&apos;s existing free gameplay remains available.</p>
+          <p>You can correct your age range in Privacy settings. If the advertising SDK has already started during the current session, the game saves the correction, stops making new game ad requests and asks you to close and reopen the app. Changing the setting cannot undo information already processed or unload an SDK that has already started. Fully close and reopen the app to apply the new age treatment from startup.</p>
+          <p>This version does not offer a parental-consent system. Before advertising is enabled for younger players, the game&apos;s provider settings, permission handling and disclosures must be updated. A parent or guardian with a concern about a child&apos;s information can contact us using the email above. Please do not send identity documents or a child&apos;s full date of birth in an initial email.</p>
         </section>
 
         <section>
@@ -67,7 +70,7 @@ function KittenJumpPrivacy() {
 
         <section>
           <h2>Retention and deletion</h2>
-          <p>Local game data remains on your device until removed or replaced. Clearing the game&apos;s app storage can permanently remove local progress and saved kittens; separately retained device backups may remain. Removing local data does not cancel a purchase or erase records held by Google or Unity.</p>
+          <p>Local game data remains on your device until removed or replaced. Clearing the game&apos;s app storage can permanently remove local progress, saved kittens and local preferences; separately retained device backups may remain. Removing local data does not cancel a purchase or erase records held by Google or Unity.</p>
           <p>We retain support correspondence only as needed to handle the request, maintain necessary support records and meet applicable legal obligations. Service providers maintain their own records under their policies; we cannot promise to erase records outside our control.</p>
         </section>
 
@@ -79,7 +82,7 @@ function KittenJumpPrivacy() {
 
         <section>
           <h2>Changes to this policy</h2>
-          <p>We will update this policy when information practices change. The date above identifies the latest revision. New features such as cloud sync, accounts, leaderboards or enabled advertising require updated disclosures before release.</p>
+          <p>We will update this policy when information practices change. The date above identifies the latest revision. New features such as cloud sync, accounts, leaderboards or advertising for additional age groups require updated disclosures before release. Earlier installed versions may not include the revision 3 privacy controls described here; update through the internal test program to receive them.</p>
         </section>
       </div>
     </main>
