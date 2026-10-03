@@ -1,0 +1,40 @@
+{
+  "slug": "ritual-research-info",
+  "name": "R²: Ritual Research",
+  "category": "Games & systemic design",
+  "status": "Playable prototype",
+  "intro": "An experimental magic game about composing rituals, observing their effects, and turning discoveries into tools for exploration.",
+  "image": "./ritual-research.png",
+  "imageAlt": "R²: Ritual Research cover showing an inscribed ritual circle among low-poly ruins, trees, and a pool",
+  "tryHere": {
+    "label": "Play on itch.io",
+    "href": "https://dbrown1157.itch.io/r-ritual-research",
+    "external": true
+  },
+  "overview": [
+    "R²: Ritual Research explores player-authored capability: instead of adapting to whatever tool a game generates, the player constructs a working through magical language. Its design grew around ritual grammar, geometry, equipment, and environmental interactions, with experimentation making knowledge useful.",
+    "The Imaginary Game Jam prototype puts that idea into a playable loop. Start at a research camp, layer glyphs into pages or an inscribed tool, and test their effects. Gathering, crafting, generated ruins, and dungeon encounters provide places to apply discoveries. Materials and knowledge carry progression rather than experience levels.",
+    "The published Unity build runs in a desktop browser with keyboard and mouse. It is an early slice with simple visuals and systems still being refined."
+  ],
+  "challenge": "Make an expressive ritual language understandable enough that players can experiment, observe a result, and revise their ideas.",
+  "approach": "Connect the ritual editor to practical world interactions, so composition can be tested through gathering, exploration, and combat.",
+  "highlights": [
+    {
+      "title": "Author the capability",
+      "text": "Ritual composition puts the player in charge of constructing a tool's behavior."
+    },
+    {
+      "title": "Knowledge compounds",
+      "text": "Research and retained discoveries support a persistent progression loop."
+    },
+    {
+      "title": "A playable experiment",
+      "text": "The browser prototype makes the design available for hands-on exploration."
+    }
+  ],
+  "facts": [
+    { "label": "Role", "value": "Game design & development" },
+    { "label": "Focus", "value": "Ritual composition" },
+    { "label": "Stage", "value": "Playable prototype" }
+  ]
+}

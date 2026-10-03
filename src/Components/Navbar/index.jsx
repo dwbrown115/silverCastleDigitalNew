@@ -31,6 +31,7 @@ function Navbar() {
         <nav id="site-navigation" className={open ? "site-navigation is-open" : "site-navigation"} aria-label="Main navigation">
           <a href="/#projects" onClick={close}>Projects</a>
           <a href="/#approach" onClick={close}>Approach</a>
+          <a className="nav-support" href="https://buymeacoffee.com/silvercastledigital" target="_blank" rel="noreferrer" onClick={close}>Support my work <span aria-hidden="true">↗</span></a>
           <a className="nav-cta" href="/#contact" onClick={close}>Start a conversation <span aria-hidden="true">↗</span></a>
         </nav>
       </div>

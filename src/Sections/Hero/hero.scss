@@ -8,6 +8,8 @@
 .hero h1 em { color: var(--lavender); font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
 .hero-summary { max-width: 560px; margin-bottom: 2.2rem; color: #d5d7e4; font-size: 1.12rem; line-height: 1.75; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero-support { display: inline-block; margin-top: 1.4rem; padding-bottom: .25rem; border-bottom: 1px solid rgba(200,193,255,.4); color: var(--lavender); font-size: .84rem; }
+.hero-support:hover { color: var(--white); border-color: currentColor; }
 .hero-footnote { position: relative; z-index: 1; min-height: 5.3rem; display: flex; align-items: center; justify-content: flex-end; gap: 2rem; border-top: 1px solid var(--line-dark); color: var(--muted-dark); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
 .hero-footnote span { display: inline-flex; align-items: center; gap: .7rem; }
 .hero-footnote span::before { content: "+"; color: var(--blue); font-size: 1rem; }

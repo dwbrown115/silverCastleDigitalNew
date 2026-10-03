@@ -14,6 +14,7 @@ function Hero() {
           <a className="button button-primary" href="#projects">See what I’m building <span aria-hidden="true">↘</span></a>
           <a className="button button-secondary" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
+        <a className="hero-support" href="https://buymeacoffee.com/silvercastledigital" target="_blank" rel="noreferrer">Enjoy what I’m building? Buy me a coffee <span aria-hidden="true">↗</span></a>
       </div>
       <div className="container hero-footnote">
         <span>Human direction</span><span>Agentic execution</span><span>Built through use</span>

@@ -7,8 +7,9 @@
 .site-navigation > a:hover { color: var(--blue); }
 .site-navigation .nav-cta { min-height: 2.9rem; display: inline-flex; align-items: center; gap: 1.3rem; padding: .55rem .9rem; border: 1px solid rgba(255,255,255,.4); }
 .nav-cta span { font-size: 1.15rem; }
+.site-navigation .nav-support { color: var(--lavender); }
 .menu-button { display: none; }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .header-inner { min-height: 4.8rem; }
   .brand span { font-size: .95rem; }
   .menu-button { display: inline-flex; align-items: center; gap: 1rem; padding: .55rem .75rem; border: 1px solid rgba(255,255,255,.35); background: transparent; color: var(--white); }

@@ -10,6 +10,8 @@ const projectOrder = [
   "recall-harbor-info",
   "kernel-info",
   "kjr-info",
+  "ritual-research-info",
+  "last-call-for-beans-info",
   "automatic-task-helper-info",
   "game-server-info",
   "garvivor-info",
@@ -72,7 +74,7 @@ function Projects() {
           <p className="eyebrow">01 / Selected work</p>
           <div>
             <h2 id="projects-heading">Things I’m building.<br /><em>Things I actually use.</em></h2>
-            <p>Six active projects spanning knowledge continuity, adaptive cognition, games, automation, and secure backend systems.</p>
+            <p>A growing collection of tools, research, and playable games spanning knowledge continuity, adaptive cognition, automation, and backend systems.</p>
           </div>
         </div>
 

@@ -1,0 +1,26 @@
+{
+  "slug": "last-call-for-beans-info",
+  "name": "Last Call For Beans",
+  "category": "Games & narrative horror",
+  "status": "Playable prototype",
+  "intro": "A short first-person stealth-horror game about one final errand through a closing store before a friend leaves town.",
+  "image": "./last-call-for-beans-gameplay.png",
+  "imageAlt": "Last Call For Beans title screen beside the dimly lit Bellwether store exterior",
+  "tryHere": {
+    "label": "Play on itch.io",
+    "href": "https://dbrown1157.itch.io/last-call-for-beans",
+    "external": true
+  },
+  "overview": [
+    "Built for the DTJ36 game jam, Last Call For Beans turns an ordinary shopping errand into a tense encounter. Jules is leaving at dawn; the player needs to retrieve a blue tin and open the store's front shutter while a listening threat patrols the aisles.",
+    "Shelves and low cover break sight, spare cans create distractions, and the break room offers a brief refuge. The prototype uses AI assistance for code, writing, and procedural visuals and audio, alongside credited CC0 fridge ambience.",
+    "Play in a desktop browser or download the Apple silicon macOS build from itch.io. Keyboard and mouse are required; headphones are recommended."
+  ],
+  "challenge": "Give a small errand enough tension to sustain a short horror experience.",
+  "approach": "Combine sound, cover, distractions, and a clear escape objective within one store.",
+  "facts": [
+    { "label": "Role", "value": "Game design & development" },
+    { "label": "Focus", "value": "Stealth & atmosphere" },
+    { "label": "Stage", "value": "Playable prototype" }
+  ]
+}
