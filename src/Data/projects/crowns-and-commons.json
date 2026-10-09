@@ -1,0 +1,90 @@
+{
+  "slug": "crowns-and-commons-info",
+  "name": "Crowns & Commons",
+  "category": "Games & multiplayer strategy",
+  "status": "Playable prototype",
+  "intro": "A browser-based multiplayer strategy game about territory, shared resources, and the risk of leaving your throne undefended.",
+  "tryHere": {
+    "label": "Visit the game site",
+    "href": "https://crownsandcommons.net/",
+    "external": true
+  },
+  "overview": [
+    "In Crowns & Commons, players move a monarch across a contested map, build their faction's economy, and recruit AI-controlled defenders and raiders. The monarch can travel; the throne stays put. A successful expedition can strengthen the faction, but sending too much of the army away can leave its seat of power exposed.",
+    "I led the concept, mechanics, presentation choices, and play-feedback loop, working with Theo, an AI development assistant, on implementation, debugging, testing, and deployment. Revisions grew out of specific play problems: opening rushes, premature throne captures, depleted resources, defensive bot decisions, and the cost of recruiting more units while keeping the existing army supplied.",
+    "The prototype combines a shared faction economy with an authoritative multiplayer server and bots that play under the same rules as humans. Turn-based play is the default, with an optional real-time mode. Tap-to-move controls and a mobile action dock support play on smaller screens, though interface density and clarity still need external play feedback."
+  ],
+  "challenge": "Make expansion, recruitment, and cooperation useful without letting an opening rush or an undefended throne decide the game before players have meaningful choices.",
+  "approach": "Tie tactical actions to a shared economy, give factions fair opening territory and preparation time, and enforce throne capture and combat rules on the server. Use hands-on play and seeded bot simulations to revise the mechanics, then seek external feedback on balance and usability.",
+  "facts": [
+    { "label": "Role", "value": "Game design & AI-assisted development" },
+    { "label": "Focus", "value": "Multiplayer strategy & shared economies" },
+    { "label": "Stage", "value": "Playable prototype" }
+  ],
+  "pages": [
+    {
+      "slug": "economy-and-throne-defense",
+      "title": "The cost of leaving home",
+      "summary": "How resource depletion, a shared vault, recruitment, and throne defense shape the decision to expand or stay close to home.",
+      "category": "Crowns & Commons game design",
+      "intro": "Every raid commits resources that could have supplied another unit or defended the faction's throne.",
+      "overview": [
+        "Three factions begin with equal territory and seeded resource layouts that guarantee opening placements. Preparation barriers prevent immediate rushes. The default mode uses action points and ordered human and bot turns, giving players time to consider their next move; real-time play offers a different pace.",
+        "Owned tiles provide basic treasury income. Crystal deposits have finite reserves: deposits that still contain crystals recover over game cycles, but a fully exhausted deposit stays empty. Their treasury contribution follows a logarithmic curve based on how full they are. In turn-based play, income and recovery follow rounds rather than elapsed wall-clock time.",
+        "Friendly territory automatically refills eligible units from the shared vault. That supply competes with recruitment and other spending, so hiring another ally also creates another demand on the faction's resources. Banking, allocation, and direct energy gifts give players ways to coordinate. Expanding recruitment capacity has its own cost.",
+        "A throne occupied by a defender cannot simply be captured by arrival. Its defense must resolve first. Capturing a throne transfers the defeated faction's territory and changes faction allegiances, making a successful raid a change to the political map as well as a combat victory. Guard, healing, and power choices add decisions to an encounter. Health is public, while enemy fuel and treasury remain private.",
+        {
+          "text": "The initial inspiration included Halfbrick's Tank Tactics story and my own design notes. Crowns & Commons develops that starting point through its combination of territory control, shared resources, throne defense, and recruitable bots.",
+          "tryHere": {
+            "label": "Watch the Tank Tactics inspiration",
+            "href": "https://youtu.be/aOYbR-Q_4Hs",
+            "external": true
+          }
+        }
+      ],
+      "challenge": "Make resource use consequential while leaving room for players to recover, coordinate, and try a different strategy.",
+      "approach": "Iterate on opening fairness, resource exhaustion, information visibility, and bot defense through repeatable simulations and hands-on games.",
+      "highlights": [],
+      "next": "External playtests will help assess long sieges, mobile control density, and the tradeoff between recruitment and supply."
+    },
+    {
+      "slug": "architecture-and-validation",
+      "title": "The server, bots, and test evidence",
+      "summary": "Authoritative game state, privacy-filtered bot observations, AWS deployment, and what the release-candidate checks establish.",
+      "category": "Crowns & Commons architecture",
+      "intro": "The server validates actions and owns game state. Human clients and bots work within those rules.",
+      "overview": [
+        "The application separates an independently buildable static JavaScript frontend from a Node.js backend connected through WebSockets. The backend manages instanced, in-memory lobbies, reconnect tokens, turn order, and game state. A public room directory, unlisted rooms, invite-only rooms, expiring and revocable invitations, and quick matching support different ways to gather players.",
+        "Bots use bounded planning with time and node budgets, plus a heuristic fallback. They receive privacy-filtered observations and follow the same gameplay rules as humans. Turn-based bot actions are paced so players can follow what happened rather than seeing an entire sequence resolve at once.",
+        "The frontend uses AWS Amplify. The backend runs on a single-instance Elastic Beanstalk deployment with Route 53 DNS and nginx TLS with certificate renewal. Development and production have separate routing. Active rooms and reconnect tokens are volatile: restarting the backend clears them. Accounts, persistent rankings, ban lists, and shared state across multiple backend instances are outside the current implementation.",
+        "The October 9, 2026 release candidate passed 912 source tests: 693 backend and 219 frontend. Its packaged backend also passed 693 tests and 16 production TLS checks, with 11 additional production-routing tests. These are results from that release candidate, rather than a claim about every later revision.",
+        "Validation also included a two-tab create, join, and leave check on the public development site, six local load scenarios, paired seeded bot simulations, and hands-on opening tests. The load scenarios included 25 rooms with 50 human connections and 100 bots, as well as a 100-room, 400-socket admission-cap scenario.",
+        "Those checks support functional and regression confidence within the tested conditions. Local load tests do not establish AWS production capacity, and internal playtests do not establish human balance or broad usability. At the October 9 snapshot, the tested work had reached the repository's main branch, but the new-domain frontend and backend cutover still needed end-to-end verification.",
+        "A longer-session mode influenced by Neptune's Pride is a future direction using the same base game with different strategic tuning. Persistent long-session play is not implemented. The near-term focus is a feature freeze and external play feedback."
+      ],
+      "challenge": "Keep multiplayer state authoritative and bot behavior bounded while maintaining readable play and clear evidence about what has been tested.",
+      "approach": "Validate rules on the backend, limit bot planning work, filter observations by player visibility, and test the packaged deployment as well as the source.",
+      "highlights": [],
+      "next": "Complete production cutover verification and gather external play feedback before expanding the feature set."
+    }
+  ],
+  "highlights": [
+    {
+      "title": "Expansion has a cost",
+      "text": "Raiding, recruiting, and supplying units all draw on resources that could protect the faction's throne."
+    },
+    {
+      "title": "Bots share the rules",
+      "text": "Defenders and raiders use bounded planning and privacy-filtered observations, with the server enforcing the same actions available to human players."
+    },
+    {
+      "title": "Human design direction",
+      "text": "I chose the mechanics and revisions; Theo assisted with implementation and validation. Play feedback guided changes to fairness, resource use, and defense."
+    },
+    {
+      "title": "Evidence with limits",
+      "text": "Source tests, packaged-backend checks, local load scenarios, and seeded simulations support the prototype. Human balance and mobile clarity remain questions for external playtests."
+    }
+  ],
+  "next": "Freeze new features and gather real play feedback before expanding into longer-session play."
+}

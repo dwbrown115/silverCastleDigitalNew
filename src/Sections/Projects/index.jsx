@@ -10,6 +10,7 @@ const projectOrder = [
   "recall-harbor-info",
   "kernel-info",
   "kjr-info",
+  "crowns-and-commons-info",
   "ritual-research-info",
   "last-call-for-beans-info",
   "automatic-task-helper-info",
