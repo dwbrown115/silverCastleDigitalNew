@@ -3,6 +3,7 @@
   "name": ".NET Game Server",
   "category": "Backend & security",
   "status": "Research prototype",
+  "seoDescription": "An authoritative .NET multiplayer backend exploring client trust, gameplay sessions, and the gap between security design and implementation.",
   "intro": "An authoritative multiplayer backend that became a practical study in translating a distrust-the-client security model into working software.",
   "overview": [
     "The Game Server began as an exercise in designing a multiplayer backend from an intentionally distrustful starting point: a client should be able to request a change, but it should not be treated as the authority that decides what becomes server truth. The early architecture decomposed the system around that assumption, separating user data, competitive scores, leaderboards, session logs, administrative data, and enforcement state while defining different read and mutation boundaries for players, administrators, and the server itself.",

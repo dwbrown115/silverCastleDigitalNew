@@ -55,3 +55,5 @@ Project and child-page images can live in the same folder as the JSON. Reference
 ```
 
 `tryHere`, images, captions, child-page facts, highlights, challenge, approach, next text, and primary actions are optional. When a child page omits a field, it inherits that field from the main project.
+
+An optional `seoDescription` provides a search and sharing description without changing the visible intro. Project and child pages otherwise use their own `intro` or `summary`. Every project and child page is included in the production HTML build and sitemap automatically.

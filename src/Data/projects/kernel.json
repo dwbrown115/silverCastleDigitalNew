@@ -3,6 +3,7 @@
   "name": "Kernel",
   "category": "Experimental AI research",
   "status": "Long-term research",
+  "seoDescription": "Experimental AI research into a persistent learner that develops internal representations and adaptive behavior through experience, without an LLM cognitive core.",
   "intro": "A long-running research project exploring whether a persistent, biologically inspired learner can develop useful internal representations and adaptive behavior through experience rather than relying on an LLM as its cognitive core.",
   "image": "./kernel-maze-world-model.png",
   "imageAlt": "A maze environment displayed beside Kernel's diagnostic internal spatial representation",

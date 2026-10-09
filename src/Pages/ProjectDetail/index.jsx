@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { Link, useParams } from "react-router-dom";
 import { projectsBySlug } from "../../Data/projects";
 import "./projectDetail.scss";
@@ -48,13 +48,6 @@ function ProjectDetail() {
     pages: project.pages,
   } : project;
   const pageMissing = Boolean(pageSlug && !page);
-  const documentTitle = content && !pageMissing ? `${content.name} | Silver Castle Digital` : "Project not found | Silver Castle Digital";
-
-  useEffect(() => {
-    document.title = documentTitle;
-    return () => { document.title = "Silver Castle Digital"; };
-  }, [documentTitle]);
-
   if (!project || pageMissing) return <UnknownProject />;
 
   return (

@@ -4,7 +4,7 @@ import "./hero.scss";
 function Hero() {
   return (
     <section className="hero" id="hero" aria-labelledby="hero-heading">
-      <img className="hero-background" src={hero1} alt="" width="1456" height="816" />
+      <img className="hero-background" src={hero1} alt="" width="1456" height="816" fetchpriority="high" />
       <div className="hero-overlay" />
       <div className="container hero-content">
         <p className="eyebrow">Independent software practice</p>

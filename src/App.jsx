@@ -4,6 +4,8 @@ import { Navbar, Footer } from "./Components";
 import { Hero, Services, Projects, Contact } from "./Sections";
 import ProjectDetail from "./Pages/ProjectDetail";
 import KittenJumpPrivacy from "./Pages/KittenJumpPrivacy";
+import PageMetadata from "./Components/PageMetadata";
+import { normalizePath } from "./seo";
 import "./App.scss";
 
 function Home() {
@@ -31,14 +33,15 @@ function ScrollManager() {
   return null;
 }
 
-function App() {
+export function AppContent() {
+  const location = useLocation();
   return (
-    <BrowserRouter>
       <div className="App">
+        <PageMetadata />
         <ScrollManager />
         <a className="skip-link" href="#main">Skip to content</a>
         <Navbar />
-        <Routes>
+        <Routes location={{ ...location, pathname: normalizePath(location.pathname) }}>
           <Route path="/" element={<Home />} />
           <Route path="/privacy/kitten-jump" element={<KittenJumpPrivacy />} />
           <Route path="/:projectSlug" element={<ProjectDetail />} />
@@ -46,8 +49,11 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
   );
+}
+
+function App() {
+  return <BrowserRouter><AppContent /></BrowserRouter>;
 }
 
 export default App;

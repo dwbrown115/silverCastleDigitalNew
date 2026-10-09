@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import "./kittenJumpPrivacy.scss";
 
 const privacyEmail = "dakota.w.brown@silvercastledigital.com";
 
 function KittenJumpPrivacy() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = "KJR: Take To The Sky Privacy Policy | Silver Castle Digital";
-    return () => { document.title = previousTitle; };
-  }, []);
-
   return (
     <main className="privacy-page" id="main">
       <header className="privacy-hero">
