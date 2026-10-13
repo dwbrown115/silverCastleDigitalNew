@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
-import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync, mkdtempSync, rmSync } from "node:fs";
 import path from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { test } from "node:test";
+import { build } from "vite";
 import { getIndexablePaths, getPageSeo, normalizePath, renderSeoHead, SITE_ORIGIN } from "../src/seo.js";
 
 const projectDirectory = new URL("../src/Data/projects/", import.meta.url);
@@ -22,6 +24,26 @@ test("unknown projects and child pages cannot become indexable homepage duplicat
     assert.equal(metadata.robots, "noindex, follow");
     assert.equal(metadata.canonical, null);
     assert.equal(metadata.structuredData, null);
+  }
+});
+
+test("unknown routes at every depth render the existing error page and remain noindex", async () => {
+  const root = fileURLToPath(new URL("../", import.meta.url));
+  const serverDirectory = mkdtempSync(path.join(root, "node_modules/.seo-test-"));
+  try {
+    await build({ root, build: { ssr: "src/entry-server.jsx", outDir: serverDirectory }, logLevel: "silent" });
+    const { renderPage } = await import(pathToFileURL(path.join(serverDirectory, "entry-server.js")));
+    for (const route of ["/missing", "/kernel-info/missing", "/kernel-info/research-history/extra", "/missing/a/b/c/"]) {
+      const { html, head } = renderPage(route);
+      assert.equal((html.match(/<main\b/g) || []).length, 1, route);
+      assert.equal((html.match(/<h1\b/g) || []).length, 1, route);
+      assert.ok(html.includes("project-not-found"), route);
+      assert.ok(html.includes('href="/#projects"'), route);
+      assert.ok(head.includes('content="noindex, follow"'), route);
+      assert.ok(!head.includes('rel="canonical"'), route);
+    }
+  } finally {
+    rmSync(serverDirectory, { recursive: true, force: true });
   }
 });
 
@@ -77,4 +99,17 @@ test("SEO generation leaves the standalone privacy policy body unchanged", () =>
   const generated = readFileSync(new URL("privacy/kitten-jump/index.html", dist), "utf8");
   assert.equal(generated.slice(generated.indexOf("<body>")), source.slice(source.indexOf("<body>")));
   assert.ok(!existsSync(path.join(new URL("../", import.meta.url).pathname, "dist-ssr")));
+});
+
+test("recommended hosting rules preserve page files and serve the generated error page for missing files", () => {
+  const rules = JSON.parse(readFileSync(new URL("../hosting/amplify-redirects.json", import.meta.url), "utf8"));
+  const domainRedirect = rules.find((rule) => rule.source === "https://silvercastledigital.com");
+  assert.equal(domainRedirect.target, SITE_ORIGIN);
+  assert.equal(domainRedirect.status, "301");
+  assert.ok(!rules.some((rule) => rule.status === "200"));
+  assert.deepEqual(rules.at(-1), { source: "/<*>", target: "/404.html", status: "404", condition: null });
+  const error = readFileSync(new URL(rules.at(-1).target.slice(1), dist), "utf8");
+  assert.ok(error.includes("project-not-found"));
+  assert.ok(error.includes('content="noindex, follow"'));
+  assert.ok(!error.includes('rel="canonical"'));
 });

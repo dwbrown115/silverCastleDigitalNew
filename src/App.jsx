@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Navbar, Footer } from "./Components";
 import { Hero, Services, Projects, Contact } from "./Sections";
-import ProjectDetail from "./Pages/ProjectDetail";
+import ProjectDetail, { UnknownProject } from "./Pages/ProjectDetail";
 import KittenJumpPrivacy from "./Pages/KittenJumpPrivacy";
 import PageMetadata from "./Components/PageMetadata";
 import { normalizePath } from "./seo";
@@ -46,6 +46,7 @@ export function AppContent() {
           <Route path="/privacy/kitten-jump" element={<KittenJumpPrivacy />} />
           <Route path="/:projectSlug" element={<ProjectDetail />} />
           <Route path="/:projectSlug/:pageSlug" element={<ProjectDetail />} />
+          <Route path="*" element={<UnknownProject />} />
         </Routes>
         <Footer />
       </div>

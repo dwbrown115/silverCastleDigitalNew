@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { projectsBySlug } from "../../Data/projects";
 import "./projectDetail.scss";
 
-function UnknownProject() {
+export function UnknownProject() {
   return (
     <main className="project-not-found" id="main">
       <div className="container">

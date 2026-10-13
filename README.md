@@ -16,9 +16,11 @@ Titles, descriptions, canonical URLs, Open Graph and Twitter previews, and JSON-
 
 Both `route.html` and `route/index.html` are emitted for Amplify's clean URL handling. Do not add a blanket 200 rewrite to `/index.html`: it would replace page-specific HTML with the homepage. Keep a 404 fallback for genuinely missing files. The `_redirects` file is for other static hosts; Amplify redirect rules are managed in its hosting settings.
 
+`hosting/amplify-redirects.json` contains the recommended permanent redirect from the apex domain to the canonical `www` host and a missing-file fallback to the generated `/404.html`. It is a reference for the Amplify console, not configuration applied by the build. Review the current hosting rules before merging these entries, preserve any other required rules, and place the 404 fallback last. Amplify appends the requested path to domain-only redirect targets and applies a 404 fallback only when a file is missing. See the [AWS redirect examples](https://docs.aws.amazon.com/amplify/latest/userguide/redirect-rewrite-examples.html).
+
 Adding a project JSON automatically adds its main page and child pages to the static build and sitemap. Add its slug to `projectOrder` in `src/Sections/Projects/index.jsx` to show it on the homepage. An optional `seoDescription` can override the introductory text used for a search snippet.
 
-Run `npm run build && npm run test:seo` to check generated page content, canonical URLs, structured data, sitemap coverage, image paths, safe metadata escaping, and preservation of the policy body. React 18 uses the lowercase `fetchpriority` attribute to prioritize the homepage hero image.
+Run `npm run build && npm run test:seo` to check generated page content, canonical URLs, structured data, sitemap coverage, image paths, safe metadata escaping, unknown-route rendering, the recommended hosting rules, and preservation of the policy body. React 18 uses the lowercase `fetchpriority` attribute to prioritize the homepage hero image.
 
 ## Contact form
 
