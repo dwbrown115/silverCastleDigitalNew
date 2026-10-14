@@ -5,6 +5,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { test } from "node:test";
 import { build } from "vite";
 import { getIndexablePaths, getPageSeo, normalizePath, renderSeoHead, SITE_ORIGIN } from "../src/seo.js";
+import { collectListings } from "../server/stripe/catalog.mjs";
 
 const projectDirectory = new URL("../src/Data/projects/", import.meta.url);
 const projects = readdirSync(projectDirectory).filter((file) => file.endsWith(".json")).map((file) => JSON.parse(readFileSync(new URL(file, projectDirectory), "utf8")));
@@ -112,4 +113,18 @@ test("recommended hosting rules preserve page files and serve the generated erro
   assert.ok(error.includes("project-not-found"));
   assert.ok(error.includes('content="noindex, follow"'));
   assert.ok(!error.includes('rel="canonical"'));
+});
+
+test("the public Stripe manifest matches project references and excludes synthetic preview data", () => {
+  const manifest = JSON.parse(readFileSync(new URL("stripe-listings.json", dist), "utf8"));
+  assert.deepEqual(manifest, collectListings(Object.values(projectIndex)));
+  assert.ok(!JSON.stringify(manifest).includes("test_silverCastleDemo"));
+  const sitemap = readFileSync(new URL("sitemap.xml", dist), "utf8");
+  assert.ok(!sitemap.includes("/__stripe-preview"));
+  for (const file of readdirSync(new URL("assets/", dist)).filter((name) => name.endsWith(".js"))) {
+    const source = readFileSync(new URL(`assets/${file}`, dist), "utf8");
+    assert.ok(!source.includes("test_silverCastleDemo"), file);
+    assert.ok(!source.includes("STRIPE_SECRET_ARN"), file);
+    assert.ok(!source.includes("api.stripe.com/v1"), file);
+  }
 });

@@ -3,6 +3,7 @@ import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { SITE_ORIGIN, escapeHtml, getPageSeo, renderSeoHead } from "../src/seo.js";
+import { readProjectListings } from "../server/stripe/project-config.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const dist = path.join(root, "dist");
@@ -44,6 +45,8 @@ try {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map((route) => `  <url><loc>${escapeHtml(`${SITE_ORIGIN}${route}`)}</loc></url>`).join("\n")}\n</urlset>\n`;
   await writeFile(path.join(dist, "sitemap.xml"), sitemap);
   await writeFile(path.join(dist, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_ORIGIN}/sitemap.xml\n`);
+  const stripeListings = await readProjectListings(path.join(root, "src/Data/projects"));
+  await writeFile(path.join(dist, "stripe-listings.json"), `${JSON.stringify(stripeListings, null, 2)}\n`);
   console.log(`Prerendered ${routes.length} indexable pages, a 404 page, and sitemap.xml.`);
 } finally {
   await rm(serverDist, { recursive: true, force: true });

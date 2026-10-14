@@ -7,7 +7,12 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', 'dist-ssr', '.artifacts', '.eslintrc.cjs'],
+  overrides: [{
+    files: ['**/*.mjs'],
+    env: { node: true },
+    rules: { 'react-refresh/only-export-components': 'off' },
+  }],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],

@@ -1,0 +1,7 @@
+.stripe-preview h1 { margin-top: 3rem; font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -.05em; }
+.stripe-preview-cards { margin-top: 3rem; }
+.stripe-preview-states { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.stripe-preview-states article { min-width: 0; }
+.stripe-preview-states h2 { font-size: 1.4rem; }
+.stripe-preview .project-detail-hero { padding: 4rem 0; }
+@media (max-width: 700px) { .stripe-preview-states { grid-template-columns: 1fr; } }

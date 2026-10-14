@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext js,jsx,mjs --report-unused-disable-directives --max-warnings 0",
     "test:seo": "node --test tests/seo.test.mjs",
+    "test:stripe": "node --test tests/stripe*.test.mjs",
+    "stripe:fixture": "node scripts/stripe-fixture.mjs",
+    "stripe:package": "node scripts/stripe-package.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

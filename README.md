@@ -31,3 +31,33 @@ The contact form uses these environment variables when configured:
 - `VITE_EMAILJS_PUBLIC_KEY`
 
 Without them, submitting opens a prefilled email to `dakota.w.brown@silvercastledigital.com`.
+
+## Stripe listings
+
+Project JSON can optionally include a `stripe` object with a Stripe Payment Link. The same listing appears on the homepage card and project page; child pages inherit it unless they specify `stripe: null` or another listing. See `src/Data/projects/SCHEMA.md` for the fields. Existing projects without a listing do not change.
+
+The browser reads product details and pricing from `VITE_STRIPE_CATALOG_URL`. The server retrieves the configured Payment Links and their line items from Stripe, publishes only product and pricing details, and caches them briefly. No API key is sent to the browser. Purchases happen on the existing Stripe-hosted Payment Link; this integration does not create charges, collect card details, or fulfil purchases.
+
+Fixed prices include currency and billing frequency. Variable amounts, tiered pricing, and usage-based billing defer to checkout rather than displaying a misleading total. A failed lookup removes the price and lets visitors check the configured Payment Link; an inactive listing has no purchase action. Tax, shipping, quantity choices, and the final total are confirmed at checkout.
+
+### Local synthetic preview
+
+Run `npm run stripe:fixture` in one terminal, then run the following in another:
+
+```sh
+VITE_STRIPE_DEMO=1 VITE_STRIPE_CATALOG_URL=http://127.0.0.1:8787/catalog npm run dev
+```
+
+Open `/__stripe-preview` at the local Vite address. The preview is explicitly labeled synthetic, and checkout is disabled. It exercises the offer component without changing real project JSON or contacting Stripe. The preview route is available only during development with the explicit flag; it is excluded from production pages and the sitemap.
+
+### Activate a real listing later
+
+1. Create or select a Stripe Payment Link and add its URL to the project's `stripe` object. An optional matching `paymentLinkId` avoids searching the account's links.
+2. Store a Stripe restricted API key in an existing AWS Secrets Manager secret encrypted with the AWS-managed Secrets Manager key. It needs read access to Payment Links, Prices, and Products, and no customer, payment, or write permissions. The secret can be the plain key or JSON containing `STRIPE_SECRET_KEY`. Never use a `VITE_*` variable for this key.
+3. Run `npm run stripe:package`. This produces `.artifacts/stripe/stripe-catalog.zip` without API keys. The website build generates `stripe-listings.json` from project JSON, containing only the selected Payment Link URLs and optional IDs. The catalog reads that manifest, so adding or removing a listing uses the normal website rebuild without another backend deployment. Editing a product's price or description in Stripe does not require rebuilding the website.
+4. Upload the archive under a new versioned key in an existing S3 bucket in the deployment region. Deploy `server/stripe/template.json` through CloudFormation with the bucket/key, the exact existing secret ARN, and the frontend origin. The template creates a public, read-only Lambda catalog endpoint and a role that can read only that secret. CORS controls browser access; the catalog itself is public and contains only the listings you selected for publication.
+5. Set `VITE_STRIPE_CATALOG_URL` in Amplify to the stack's `CatalogEndpoint` output and rebuild the frontend.
+
+The server caches catalog data for 60 seconds, and visible offers refresh every 30 seconds. Price changes can therefore take about 90 seconds to appear. The endpoint accepts only GET requests to `/catalog` or `/`, with no lookup parameters; visitors cannot request arbitrary Stripe IDs. API errors do not expose Stripe responses or secrets. If the website manifest cannot be loaded or validated, the service returns an error rather than serving old prices or an outdated list of products.
+
+The current integration uses synthetic data for verification. No live listing, key, backend stack, or real checkout has been connected. Run `npm run test:stripe` for the catalog and price-display checks, and keep the SEO build checks when changing project data.

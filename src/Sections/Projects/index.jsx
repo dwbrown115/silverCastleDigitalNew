@@ -4,6 +4,7 @@ import {
 } from "./Project Images";
 import { Link } from "react-router-dom";
 import { projectsBySlug } from "../../Data/projects";
+import StripeOffer from "../../Components/StripeOffer";
 import "./projects.scss";
 
 const projectOrder = [
@@ -67,6 +68,30 @@ function renderProjectPlaceholder(project, index) {
   );
 }
 
+/* eslint-disable react/prop-types */
+export function ProjectCard({ project, index, stripePreview = false }) {
+  const tryHere = project.tryHere;
+  return (
+    <article className={`project-card project-card-${project.name.toLowerCase().replaceAll(/[^a-z]+/g, "-")}`}>
+      <div className="project-art">
+        {project.image ? <img src={project.image} alt={project.imageAlt || ""} loading="lazy" /> : project.slug === "automatic-task-helper-info" ? <WorkflowVisual /> : renderProjectPlaceholder(project, index)}
+      </div>
+      <div className="project-meta"><span>{project.category}</span><span className="project-status">{project.status}</span></div>
+      <h3>{project.name}</h3>
+      <p>{project.intro}</p>
+      {tryHere && (
+        <a className="project-try-link" href={tryHere.href} {...(tryHere.external ? { target: "_blank", rel: "noreferrer" } : {})}>
+          {tryHere.label || "Try here"}<span aria-hidden="true">↗</span>
+        </a>
+      )}
+      <StripeOffer stripe={project.stripe} projectName={project.name} preview={stripePreview} />
+      <Link className="project-action" to={`/${project.slug}`}>
+        View project<span aria-hidden="true">↗</span>
+      </Link>
+    </article>
+  );
+}
+
 function Projects() {
   return (
     <section className="projects" id="projects" aria-labelledby="projects-heading">
@@ -80,27 +105,7 @@ function Projects() {
         </div>
 
         <div className="current-projects">
-          {currentProjects.map((project, index) => {
-            const tryHere = project.tryHere;
-            return (
-              <article className={`project-card project-card-${project.name.toLowerCase().replaceAll(/[^a-z]+/g, "-")}`} key={project.name}>
-                <div className="project-art">
-                  {project.image ? <img src={project.image} alt={project.imageAlt || ""} loading="lazy" /> : project.slug === "automatic-task-helper-info" ? <WorkflowVisual /> : renderProjectPlaceholder(project, index)}
-                </div>
-                <div className="project-meta"><span>{project.category}</span><span className="project-status">{project.status}</span></div>
-                <h3>{project.name}</h3>
-                <p>{project.intro}</p>
-                {tryHere && (
-                  <a className="project-try-link" href={tryHere.href} {...(tryHere.external ? { target: "_blank", rel: "noreferrer" } : {})}>
-                    {tryHere.label || "Try here"}<span aria-hidden="true">↗</span>
-                  </a>
-                )}
-                <Link className="project-action" to={`/${project.slug}`}>
-                  View project<span aria-hidden="true">↗</span>
-                </Link>
-              </article>
-            );
-          })}
+          {currentProjects.map((project, index) => <ProjectCard project={project} index={index} key={project.name} />)}
         </div>
 
         <div className="earlier-work">

@@ -1,0 +1,54 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Read-only public Stripe listing catalog for Silver Castle Digital",
+  "Parameters": {
+    "ArtifactBucket": { "Type": "String", "Description": "Existing S3 bucket containing the packaged Lambda, in this region" },
+    "ArtifactKey": { "Type": "String", "Description": "Versioned S3 object key for stripe-catalog.zip" },
+    "StripeSecretArn": { "Type": "String", "Description": "Existing Secrets Manager secret ARN, encrypted with the AWS-managed secretsmanager key", "AllowedPattern": "arn:aws[a-z-]*:secretsmanager:[a-z0-9-]+:[0-9]{12}:secret:.+" },
+    "ListingsUrl": { "Type": "String", "Default": "https://www.silvercastledigital.com/stripe-listings.json", "Description": "Fixed trusted HTTPS website manifest; published by the frontend build", "AllowedPattern": "https://[^/?#@:]+/[^?#]*" },
+    "AllowedOrigins": { "Type": "CommaDelimitedList", "Default": "https://www.silvercastledigital.com", "Description": "Exact frontend origins allowed to read the public catalog in browsers" },
+    "ReservedConcurrency": { "Type": "Number", "Default": 2, "MinValue": 1, "MaxValue": 10 }
+  },
+  "Resources": {
+    "CatalogRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": { "Version": "2012-10-17", "Statement": [{ "Effect": "Allow", "Principal": { "Service": "lambda.amazonaws.com" }, "Action": "sts:AssumeRole" }] },
+        "Policies": [{ "PolicyName": "ReadStripeSecret", "PolicyDocument": { "Version": "2012-10-17", "Statement": [{ "Effect": "Allow", "Action": "secretsmanager:GetSecretValue", "Resource": { "Ref": "StripeSecretArn" } }] } }]
+      }
+    },
+    "CatalogFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Runtime": "nodejs22.x",
+        "Architectures": ["arm64"],
+        "Handler": "lambda.handler",
+        "MemorySize": 128,
+        "Timeout": 12,
+        "ReservedConcurrentExecutions": { "Ref": "ReservedConcurrency" },
+        "Role": { "Fn::GetAtt": ["CatalogRole", "Arn"] },
+        "Code": { "S3Bucket": { "Ref": "ArtifactBucket" }, "S3Key": { "Ref": "ArtifactKey" } },
+        "Environment": { "Variables": { "STRIPE_SECRET_ARN": { "Ref": "StripeSecretArn" }, "STRIPE_LISTINGS_URL": { "Ref": "ListingsUrl" } } }
+      }
+    },
+    "CatalogUrl": {
+      "Type": "AWS::Lambda::Url",
+      "Properties": {
+        "AuthType": "NONE",
+        "TargetFunctionArn": { "Ref": "CatalogFunction" },
+        "Cors": { "AllowCredentials": false, "AllowMethods": ["GET"], "AllowOrigins": { "Ref": "AllowedOrigins" }, "MaxAge": 300 }
+      }
+    },
+    "CatalogUrlPermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": { "Action": "lambda:InvokeFunctionUrl", "FunctionName": { "Ref": "CatalogFunction" }, "Principal": "*", "FunctionUrlAuthType": "NONE" }
+    },
+    "CatalogInvokePermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": { "Action": "lambda:InvokeFunction", "FunctionName": { "Ref": "CatalogFunction" }, "Principal": "*", "InvokedViaFunctionUrl": true }
+    }
+  },
+  "Outputs": {
+    "CatalogEndpoint": { "Description": "Set VITE_STRIPE_CATALOG_URL to this URL in Amplify, then rebuild", "Value": { "Fn::Join": ["", [{ "Fn::GetAtt": ["CatalogUrl", "FunctionUrl"] }, "catalog"]] } }
+  }
+}

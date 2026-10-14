@@ -1,0 +1,15 @@
+.stripe-offer { margin: .25rem 0 1rem; padding-top: 1rem; border-top: 1px solid var(--line-light); color: var(--ink); min-width: 0; overflow-wrap: anywhere; }
+.stripe-offer-name { display: block; margin-bottom: .4rem; font-size: .92rem; font-weight: 600; }
+.stripe-offer .stripe-offer-description { margin: 0 0 .55rem; color: var(--muted-light); font-size: .86rem; line-height: 1.6; }
+.stripe-offer .stripe-offer-price { margin: 0 0 .4rem; font-size: 1.1rem; font-weight: 600; }
+.stripe-offer .stripe-offer-note { margin: 0; color: var(--muted-light); font-size: .78rem; line-height: 1.6; }
+.stripe-offer-link { width: fit-content; min-height: 44px; display: inline-flex; align-items: center; gap: .6rem; padding-block: .65rem; color: #5f50ce; font-size: .86rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.stripe-offer-link:hover { color: var(--ink); }
+.stripe-offer-link:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.stripe-offer-disabled { display: block; padding-block: .65rem; color: var(--muted-light); font-size: .84rem; }
+.stripe-offer .stripe-offer-preview { margin: 0 0 .7rem; color: #5f50ce; font-size: .78rem; font-weight: 600; }
+.stripe-offer-dark { margin-top: 1.7rem; border-color: var(--line-dark); color: var(--white); }
+.stripe-offer-dark .stripe-offer-description, .stripe-offer-dark .stripe-offer-note, .stripe-offer-dark .stripe-offer-disabled { color: var(--muted-dark); }
+.stripe-offer-dark .stripe-offer-link, .stripe-offer-dark .stripe-offer-preview { color: var(--blue); }
+.stripe-offer-dark .stripe-offer-link:hover { color: var(--white); }
+@media (min-width: 701px) and (max-width: 1000px) { .project-card > .stripe-offer { grid-column: 2; } }
