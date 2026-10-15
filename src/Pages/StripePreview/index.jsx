@@ -3,9 +3,12 @@ import StripeOffer from "../../Components/StripeOffer";
 import StripeOfferView from "../../Components/StripeOffer/StripeOfferView";
 import { ProjectCard } from "../../Sections/Projects";
 import { projectsBySlug } from "../../Data/projects";
+import { canonicalPaymentLink } from "../../stripeCatalog";
 import "./stripePreview.scss";
 
-const config = { paymentLink: "https://buy.stripe.com/test_silverCastleDemo", label: "View synthetic checkout" };
+const paymentLink = canonicalPaymentLink(import.meta.env.VITE_STRIPE_PREVIEW_PAYMENT_LINK || "https://buy.stripe.com/test_silverCastleDemo");
+if (!paymentLink || !new URL(paymentLink).pathname.startsWith("/test_")) throw new Error("Stripe preview requires a test-mode Payment Link");
+const config = { paymentLink, label: "View synthetic checkout" };
 const base = {
   paymentLink: config.paymentLink, status: "available", name: "Synthetic test listing",
   description: "Fixture data for testing the optional Stripe integration.",
@@ -28,8 +31,8 @@ export default function StripePreview() {
       <section className="projects">
         <div className="container">
           <h1>Stripe integration preview</h1>
-          <p>Local synthetic fixtures. No real listing, purchase, or portfolio content is changed.</p>
-          <p>The card and detail examples load the local catalog endpoint. The remaining examples exercise display states.</p>
+          <p>Synthetic test listing. Checkout is disabled and public portfolio content is unchanged.</p>
+          <p>The card and detail examples load the configured catalog endpoint. The remaining examples use local fixtures.</p>
           <Link className="text-link" to="/">Return to the portfolio</Link>
           <div className="current-projects stripe-preview-cards"><ProjectCard project={project} index={0} stripePreview /></div>
         </div>

@@ -50,6 +50,8 @@ VITE_STRIPE_DEMO=1 VITE_STRIPE_CATALOG_URL=http://127.0.0.1:8787/catalog npm run
 
 Open `/__stripe-preview` at the local Vite address. The preview is explicitly labeled synthetic, and checkout is disabled. It exercises the offer component without changing real project JSON or contacting Stripe. The preview route is available only during development with the explicit flag; it is excluded from production pages and the sitemap.
 
+To verify a deployed AWS sandbox catalog, set `VITE_STRIPE_CATALOG_URL` to its HTTPS endpoint and `VITE_STRIPE_PREVIEW_PAYMENT_LINK` to the matching `https://buy.stripe.com/test_...` URL while keeping `VITE_STRIPE_DEMO=1`. The card and detail examples then display data retrieved by AWS from Stripe test mode; the remaining scenarios still use fixtures. Add the exact local Vite origin to the test endpoint's CORS configuration. Preview checkout stays disabled, and the override rejects live Payment Links.
+
 ### Activate a real listing later
 
 1. Create or select a Stripe Payment Link and add its URL to the project's `stripe` object. An optional matching `paymentLinkId` avoids searching the account's links.
@@ -60,4 +62,6 @@ Open `/__stripe-preview` at the local Vite address. The preview is explicitly la
 
 The server caches catalog data for 60 seconds, and visible offers refresh every 30 seconds. Price changes can therefore take about 90 seconds to appear. The endpoint accepts only GET requests to `/catalog` or `/`, with no lookup parameters; visitors cannot request arbitrary Stripe IDs. API errors do not expose Stripe responses or secrets. If the website manifest cannot be loaded or validated, the service returns an error rather than serving old prices or an outdated list of products.
 
-The current integration uses synthetic data for verification. No live listing, key, backend stack, or real checkout has been connected. Run `npm run test:stripe` for the catalog and price-display checks, and keep the SEO build checks when changing project data.
+The `silvercastle-stripe-catalog-test` CloudFormation stack in `us-east-1` uses the restricted test key stored as `silvercastledigital/stripe/catalog/test`. Its public catalog is `https://fuuoa3hroehkhkwsdq7lltdpnm0ukhbo.lambda-url.us-east-1.on.aws/catalog`. The portfolio's Amplify branch is configured to use that endpoint. This sandbox deployment reads one fixed synthetic listing packaged with the function; it does not read the public project manifest. Public project JSON remains unchanged.
+
+For live listings, deploy the production template above with a live restricted key and the website manifest, then switch Amplify's catalog URL to that stack. Run `npm run test:stripe` for the catalog and price-display checks, and keep the SEO build checks when changing project data.
