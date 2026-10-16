@@ -121,9 +121,13 @@ test("the public Stripe manifest matches project references and excludes synthet
   assert.ok(!JSON.stringify(manifest).includes("test_silverCastleDemo"));
   const sitemap = readFileSync(new URL("sitemap.xml", dist), "utf8");
   assert.ok(!sitemap.includes("/__stripe-preview"));
+  assert.ok(!sitemap.includes("/__commerce-preview"));
   for (const file of readdirSync(new URL("assets/", dist)).filter((name) => name.endsWith(".js"))) {
     const source = readFileSync(new URL(`assets/${file}`, dist), "utf8");
     assert.ok(!source.includes("test_silverCastleDemo"), file);
+    assert.ok(!source.includes("__commerce-preview"), file);
+    assert.ok(!source.includes("castleaf.example.test"), file);
+    assert.ok(!source.includes("Synthetic shared-catalog test"), file);
     assert.ok(!source.includes("STRIPE_SECRET_ARN"), file);
     assert.ok(!source.includes("api.stripe.com/v1"), file);
   }

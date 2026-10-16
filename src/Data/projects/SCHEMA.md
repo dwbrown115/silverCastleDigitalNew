@@ -76,4 +76,21 @@ Pricing comes from the configured catalog endpoint, not the JSON. Do not add amo
 
 Child pages inherit their project's listing. Set `"stripe": null` on a child page to hide it, or provide a different `stripe` object to use another listing. Omit `stripe` on projects without a listing; their existing cards stay unchanged.
 
+### Shared order-service offers (test only)
+
+An optional `commerce` object selects a stable product from the shared order-service catalog, without a Stripe Payment Link or Price ID:
+
+```json
+"commerce": {
+  "productId": "castleaf-desktop",
+  "label": "Open test purchase page"
+}
+```
+
+Use one offer provider per project/page. `commerce` takes precedence over legacy `stripe`, including an explicit `"commerce": null` which hides the offer. Child pages inherit the parent configuration, can override it, or hide it with `null`. Neither field is required.
+
+The catalog controls the validated test price, name, and description; project JSON cannot select a Stripe price or amount. The frontend needs a separate `VITE_COMMERCE_CATALOG_URL` and independently approved `VITE_COMMERCE_PURCHASE_PAGE`. Purchases are disabled unless both `VITE_COMMERCE_PURCHASES_ENABLED=1` and the catalog's `purchaseEnabled=true` are present, and an optional per-offer `purchaseEnabled=false` also prevents navigation. The returned purchase URL must exactly match the configured purchase page with the selected `product` query parameter and no other parameters or fragment. Unconfigured, loading, unavailable, invalid, and network-error states never provide a purchase link.
+
+This provider currently accepts only `schema: 1`, `test: true`, fixed positive integer USD minor-unit amounts. It labels every offer as TEST MODE. Keep its frontend enable flag off pending actual sandbox verification. No public project uses this field yet. See `docs/COMMERCE-INTEGRATION.md` for the contract and local synthetic preview.
+
 See the repository README for the catalog endpoint, local synthetic preview, and future deployment setup. The synthetic preview never adds a listing to the public portfolio.

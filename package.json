@@ -9,6 +9,8 @@
     "lint": "eslint . --ext js,jsx,mjs --report-unused-disable-directives --max-warnings 0",
     "test:seo": "node --test tests/seo.test.mjs",
     "test:stripe": "node --test tests/stripe*.test.mjs",
+    "test:commerce": "node --test tests/commerce*.test.mjs",
+    "commerce:fixture": "node scripts/commerce-fixture.mjs",
     "stripe:fixture": "node scripts/stripe-fixture.mjs",
     "stripe:package": "node scripts/stripe-package.mjs",
     "preview": "vite preview"

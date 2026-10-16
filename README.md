@@ -34,6 +34,8 @@ Without them, submitting opens a prefilled email to `dakota.w.brown@silvercastle
 
 ## Stripe listings
 
+Optional shared order-service offers are documented in `docs/COMMERCE-INTEGRATION.md`. They use separate `commerce` project JSON and `VITE_COMMERCE_*` settings, preserve legacy Payment Links, and remain disabled by default. The new adapter is test-only; no public project or AWS configuration has been switched to it.
+
 Project JSON can optionally include a `stripe` object with a Stripe Payment Link. The same listing appears on the homepage card and project page; child pages inherit it unless they specify `stripe: null` or another listing. See `src/Data/projects/SCHEMA.md` for the fields. Existing projects without a listing do not change.
 
 The browser reads product details and pricing from `VITE_STRIPE_CATALOG_URL`. The server retrieves the configured Payment Links and their line items from Stripe, publishes only product and pricing details, and caches them briefly. No API key is sent to the browser. Purchases happen on the existing Stripe-hosted Payment Link; this integration does not create charges, collect card details, or fulfil purchases.

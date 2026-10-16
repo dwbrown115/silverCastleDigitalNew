@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Link, useParams } from "react-router-dom";
 import { projectsBySlug } from "../../Data/projects";
-import StripeOffer from "../../Components/StripeOffer";
+import ProjectOffer from "../../Components/ProjectOffer";
 import "./projectDetail.scss";
 
 export function UnknownProject() {
@@ -63,10 +63,10 @@ function ProjectDetail() {
             </div>
             {content.status && <span className="detail-status">{content.status}</span>}
           </div>
-          {(content.intro || content.tryHere || content.stripe) && <div className={`detail-intro-wrap${content.intro ? "" : " has-action-only"}`}>
+          {(content.intro || content.tryHere || content.stripe || content.commerce) && <div className={`detail-intro-wrap${content.intro ? "" : " has-action-only"}`}>
             {content.intro && <p className="detail-intro">{content.intro}</p>}
             {renderActionLink(content.tryHere)}
-            <StripeOffer stripe={content.stripe} projectName={project.name} dark />
+            <ProjectOffer content={content} projectName={project.name} dark />
           </div>}
         </div>
       </section>

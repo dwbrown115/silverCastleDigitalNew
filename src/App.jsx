@@ -9,6 +9,7 @@ import { normalizePath } from "./seo";
 import "./App.scss";
 
 const StripePreview = import.meta.env.DEV && import.meta.env.VITE_STRIPE_DEMO === "1" ? lazy(() => import("./Pages/StripePreview")) : null;
+const CommercePreview = import.meta.env.DEV && import.meta.env.VITE_COMMERCE_DEMO === "1" ? lazy(() => import("./Pages/CommercePreview")) : null;
 
 function Home() {
   return (
@@ -46,6 +47,7 @@ export function AppContent() {
         <Routes location={{ ...location, pathname: normalizePath(location.pathname) }}>
           <Route path="/" element={<Home />} />
           {StripePreview && <Route path="/__stripe-preview" element={<Suspense fallback={<main id="main" className="project-not-found"><div className="container">Loading local Stripe preview…</div></main>}><StripePreview /></Suspense>} />}
+          {CommercePreview && <Route path="/__commerce-preview" element={<Suspense fallback={<main id="main" className="project-not-found"><div className="container">Loading local catalog preview…</div></main>}><CommercePreview /></Suspense>} />}
           <Route path="/privacy/kitten-jump" element={<KittenJumpPrivacy />} />
           <Route path="/:projectSlug" element={<ProjectDetail />} />
           <Route path="/:projectSlug/:pageSlug" element={<ProjectDetail />} />

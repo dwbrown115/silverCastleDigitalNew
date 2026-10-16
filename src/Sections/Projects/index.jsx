@@ -4,7 +4,7 @@ import {
 } from "./Project Images";
 import { Link } from "react-router-dom";
 import { projectsBySlug } from "../../Data/projects";
-import StripeOffer from "../../Components/StripeOffer";
+import ProjectOffer from "../../Components/ProjectOffer";
 import "./projects.scss";
 
 const projectOrder = [
@@ -69,7 +69,7 @@ function renderProjectPlaceholder(project, index) {
 }
 
 /* eslint-disable react/prop-types */
-export function ProjectCard({ project, index, stripePreview = false }) {
+export function ProjectCard({ project, index, stripePreview = false, showDetails = true }) {
   const tryHere = project.tryHere;
   return (
     <article className={`project-card project-card-${project.name.toLowerCase().replaceAll(/[^a-z]+/g, "-")}`}>
@@ -84,10 +84,10 @@ export function ProjectCard({ project, index, stripePreview = false }) {
           {tryHere.label || "Try here"}<span aria-hidden="true">↗</span>
         </a>
       )}
-      <StripeOffer stripe={project.stripe} projectName={project.name} preview={stripePreview} />
-      <Link className="project-action" to={`/${project.slug}`}>
+      <ProjectOffer content={project} projectName={project.name} preview={stripePreview} />
+      {showDetails && <Link className="project-action" to={`/${project.slug}`}>
         View project<span aria-hidden="true">↗</span>
-      </Link>
+      </Link>}
     </article>
   );
 }
